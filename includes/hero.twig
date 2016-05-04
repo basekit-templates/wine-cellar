@@ -1,0 +1,16 @@
+<div class="hero">
+
+    {{widget('image', 'image', {
+        'src': asset("images/feature-image.jpg"),
+        'title': 'The title text',
+        'description': 'The description text',
+        'alt': 'The alternate text',
+        'fileName': 'Logo Image',
+        'fileSize': 3,
+        'imageSize': '2500 x 1000',
+        'imageWidth': '2500'
+    })|raw}}
+
+    {% include "includes/header.twig" %}
+
+</div>

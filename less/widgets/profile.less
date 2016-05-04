@@ -1,0 +1,345 @@
+// --------------------------------------
+// Kings Template: CSS > Widgets > Profile
+// ---------------------------------------
+
+
+.profile {
+
+
+    // Typography
+    a, h2, h3, p {
+        position: relative;
+        display: inline-block;
+        padding: 0;
+    }
+    h2, h3, p {
+        .paragraph;
+    }
+
+
+    // Twitter
+    .avatar,
+    .account-link,
+    .tweet-metadata {
+        display: none;
+    }
+    .tweet-item {
+        width: 100%;
+        background-color: transparent;
+        padding: 0;
+    }
+    .tweet-content {
+       padding: 0;
+    }
+
+
+    // Address
+    .address p {
+        padding-left: 10px;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            right: -6px;
+            display: inline-block;
+            content: ",";
+        }
+
+        &:last-child:after {
+            display: none;
+        }
+    }
+
+
+    // Form
+    .form-body {
+        .flex-display;
+        .justify-content(center);
+    }
+    .form-group {
+        margin-bottom: 0;
+    }
+    .label {
+        display: none;
+    }
+    .legend {
+        margin-bottom: 20px;
+    }
+    .input {
+        max-width: 250px;
+        margin-right: 20px;
+    }
+
+}
+
+
+// Header Profile
+// --------------
+
+.template-header {
+
+    .profile {
+        @media @mobile {
+            padding-left: 20px;
+
+            .twitter,
+            .companyaddress,
+            .companydescription,
+            .companycopyright {
+                padding-top: 6px;
+            }
+            .companyheadline,
+            .companystrapline {
+                padding: 6px 0;
+                line-height: 18px;
+            }
+        }
+
+        // Typography
+        a, h2, h3, p {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0;
+            font-family: @font__h4--font-family;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 3px;
+            color: @color__feature-headline--text;
+            text-transform: uppercase;
+            -webkit-font-smoothing: inherit;
+
+            @media @mobile {
+                line-height: 18px;
+            }
+        }
+
+
+        // Email
+        .emailaddress__email {
+            @media @tablet {
+                .flex-display;
+                color: @color__header--background;
+
+                &:before,
+                &:after {
+                    font-family: 'FontAwesome', sans-serif;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                }
+
+                &:before {
+                    display: inline-block;
+                    content: "\f003";
+                    font-size: 22px;
+                    color: @color__feature-headline--text;
+                }
+            }
+        }
+
+
+        // Telephone
+        .phone-number {
+            @media @tablet {
+                display: none;
+            }
+        }
+        .phone-number-link:before {
+            display: none;
+
+            @media @tablet {
+                position: relative;
+                top: 3px;
+                display: inline-block;
+                font-size: 24px;
+            }
+            @media @mobile {
+                font-size: 21px;
+            }
+        }
+
+        // Address
+        .companyaddress {
+            margin-left: -10px;
+        }
+        .address p {
+            font-size: 12px;
+            line-height: 22px;
+        }
+
+        // Strapline / Description
+        .strapline,
+        .description,
+        .tweet-content,
+        .tweet-content a,
+        .copyright {
+            font-size: 12px;
+            line-height: 22px;
+
+            @media @mobile {
+                line-height: 18px;
+            }
+        }
+
+        // Social Icons
+        .social-item {
+            margin-right: 16px;
+
+            @media @mobile {
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+        .social-link:before {
+            width: auto;
+            background-color: transparent;
+            color: @color__companyname--text;
+        }
+
+        // Twitter
+        .avatar,
+        .account-link,
+        .tweet-metadata {
+            display: none;
+        }
+        .tweet-content {
+
+            a {
+                color: lighten(@color__primary, 35%);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+
+        // Form
+        // ----------
+
+        .signupform {
+            margin-left: -20px;
+            padding-bottom: 0;
+
+            @media @mobile {
+                max-height: 43px;
+            }
+        }
+
+        .legend {
+            display: none;
+        }
+
+        .form-body {
+            .justify-content(inherit);
+        }
+
+        // Input
+        .input,
+        .button {
+            .feature__button;
+            margin: 0;
+            box-shadow: none;
+            line-height: 40px;
+
+            @media @mobile {
+                border-top: 0;
+                border-bottom: 0;
+                border-left: 0;
+                border-top-color: @color__header--background;
+                border-width: 1px;
+                line-height: 43px;
+            }
+        }
+        .input {
+            max-width: 170px;
+            margin-top: 0;
+
+            @media @mobile {
+                max-width: 140px;
+            }
+        }
+
+        // Placeholder
+        .input::-webkit-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input:-moz-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input:-ms-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+        .input::-ms-input-placeholder {
+            opacity: .4;
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            color: @color__companyname--text;
+        }
+
+        // Button
+        .button {
+            position: relative;
+            top: 1px;
+            margin-top: 0;
+            padding: 0 10px;
+            border-left: 0;
+        }
+
+    }
+
+
+    // Profile Message
+    // ---------------
+
+    .message {
+        padding: 0;
+
+        &:before {
+            display: none;
+        }
+    }
+    .bk-message {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        background-image: none;
+        border: 0;
+        border-radius: 0;
+        color: @color__companyname--text;
+
+        @media @mobile {
+            padding-top: 8px;
+            background-image: image('/images/msg-empty.png');
+        }
+
+        p {
+            font-family: @font__h4--font-family;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            -webkit-font-smoothing: inherit;
+        }
+    }
+
+}

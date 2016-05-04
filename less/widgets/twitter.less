@@ -1,0 +1,163 @@
+// -----------------------------------
+// Wine Cellar: CSS > Widgets > Twitter Feed
+// -----------------------------------
+
+
+
+// Tweet Item
+// ------------------------------
+
+.tweet-item {
+	position: relative;
+    display: inline-block;
+    float: left;
+    padding: 30px;
+    background-color: @color__twitter-item--background;
+    margin-right: 3%;
+    width: 100%;
+    .boxshadow;
+
+    @media (max-width: 1400px) {
+        margin-right: 2%;
+        margin-bottom: 2%;
+        padding: 30px;
+    }
+    @media @tablet {
+        margin-right: 0;
+        margin-bottom: 20px;
+        padding: 30px;
+    }
+
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+
+
+
+
+// Avatar
+// ------------------------------
+
+
+.twitter__avatar {
+    float: right;
+}
+
+.twitter__avatar-image {
+	width: 40px;
+	height: 40px;
+	display: block;
+}
+
+.avatar-link {
+    display: inline-block;
+}
+
+
+
+
+// Tweet Content
+// ------------------------------
+
+
+.tweet-content {
+    padding-top: 15px;
+    position: relative;
+
+
+    // Link
+    a {
+        // Allows text wrap for long words without spacing
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        word-wrap: break-word;
+        hyphens: auto;
+        // Needed for Windows Mobile IE
+        display: inline-block;
+    }
+}
+
+
+
+
+// Account Link
+// ------------------------------
+
+
+.twitter__account-link {
+    border-bottom: 3px solid @color-secondary;
+    display: inline-block;
+    margin: 0px 0px 10px;
+    padding: 0px 0px 20px;
+    width: 6%;
+}
+
+
+
+
+// Tweet Metadata
+// ------------------------------
+
+
+.tweet-metadata {
+    font-family: @font__h4--font-family;
+	font-size: 12px;
+	color: fade(@color__p--text, 50%);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @media @bp-global-small {
+        font-size: 10px;
+    }
+
+    a {
+        color: fade(@color__p--text, 50%);
+    }
+
+}
+
+// Tweet Source
+
+.tweet-source {
+	color: fade(@color__p--text, 50%);
+}
+
+// Timestamp
+
+.twitter__timestamp {
+	font-size: 12px;
+	color: @color__p--text;
+
+    @media @bp-global-small {
+        font-size: 10px;
+    }
+}
+
+// Retweeted By
+
+.retweeted-by {
+    margin-left: 14px;
+}
+
+
+
+
+
+// ---------------------------------
+// Columns Variations
+// ---------------------------------
+
+
+.responsivecolumns {
+
+    // All Columns
+    .column .tweet-item {
+        width: 100%;
+    }
+}

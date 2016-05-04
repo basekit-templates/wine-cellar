@@ -1,0 +1,45 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<!-- Page Content -->
+<section class="page  page--home">
+
+    {% include "includes/hero.twig" %}
+
+    <!-- Zone Content -->
+    <div id="main-scroll" class="main-content">
+
+            <div class="page-container">
+
+            {{zone('main')|raw}}
+
+            </div>
+            
+        </div>
+</section>
+
+{% include "includes/footer.twig" %}
+
+{% endblock %}
+
+{% block bodyscripts %}
+
+<script src="{{asset('js/hero.js')}}"></script>
+
+<!-- Smooth Scroll -->
+<script>
+    $(document).ready(function(){
+        $('a[href*=#]').bind('click', function(e) {
+            e.preventDefault();
+            var target = $(this).attr("href");
+            $('html, body').stop().animate({ scrollTop: $(target).offset().top}, 1000, function() {
+                location.hash = target;
+            });
+            return false;
+        });
+    });
+</script>
+
+{% endblock %}
+

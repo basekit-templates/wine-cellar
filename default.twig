@@ -1,0 +1,38 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<section class="page  page--default">
+
+
+    {% include "includes/header.twig" %}
+
+    <section>
+        {{widget('image', 'defaultpage', {
+          'src': asset("images/contact-image.jpg"),
+          'title': 'Default Page',
+          'description': '',
+          'alt': 'The alternate text',
+          'fileName': 'Logo Image',
+          'fileSize': 3,
+          'imageSize': '2500 x 500',
+          'imageWidth': '2500'
+        })|raw}}
+    </section>
+
+
+    <!-- Zone Content -->
+    <div class="main-content">
+        <div class="container">
+
+            {{zone('main')|raw}}
+
+        </div>
+    </div>
+
+</section>
+
+{% include "includes/footer.twig" %}
+
+{% endblock %}
+

@@ -1,0 +1,236 @@
+// -------------------------------------
+// Kings Template: LESS > Widgets
+// -------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  INCLUDES
+//  --------
+
+//  #Widget Spacing
+
+//  #Profile
+//  #Content
+
+//  #Forms (General)
+//  #Contact Form
+//  #Sign Up Form
+
+//  #Navigation
+//  #Feature
+//  #Gallery
+//  #Slideshow
+
+//  #Twitter
+//  #Social List
+//  #Yelp Review
+
+
+//  IN FILE
+//  --------
+
+//  #Logo & Company Name
+//  #Company Name
+//  #Buttons
+//  #Dropbox
+//  #Click to Call
+//  #Images
+//  #Divider (Keyline)
+
+@import "@{templateLocal}/less/widgets/profile.less";
+
+@import "@{templateLocal}/less/widgets/forms.less";
+@import "@{templateLocal}/less/widgets/contact-form.less";
+@import "@{templateLocal}/less/widgets/signupform.less";
+
+@import "@{templateLocal}/less/navigation.less";
+@import "@{templateLocal}/less/widgets/feature.less";
+@import "@{templateLocal}/less/widgets/gallery.less";
+@import "@{templateLocal}/less/widgets/slideshow.less";
+
+@import "@{templateLocal}/less/widgets/twitter.less";
+@import "@{templateLocal}/less/widgets/social-list.less";
+@import "@{templateLocal}/less/widgets/yelp-review.less";
+
+
+
+
+
+// -----------------------------
+// #Logo / Company Name
+// -----------------------------
+
+
+.companyname,
+.logo {
+    text-align: center;
+}
+.companyname {
+    margin-top: 10px;
+}
+
+
+
+
+// -----------------------------
+// #Company Name
+// -----------------------------
+
+
+.companyname {
+    font-size: 0;
+    line-height: 0;
+}
+
+.company-link {
+    margin: 0;
+    color: @color__companyname--text;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase;
+
+    &:hover {
+        text-decoration: none;
+    }
+    @media @bp-global-medium, @bp-global-small {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    @media @bp-global-small {
+        font-size: bkscale(@font__companyname--font-size, 0.8);
+        line-height: bkscale(@font__companyname--line-height, 0.8);
+    }
+}
+
+
+
+
+// -----------------------------
+// #Buttons
+// -----------------------------
+
+
+
+
+// #Dropbox
+// ------------------------------
+
+
+.dropbox__button,
+.dropbox__label {
+    vertical-align: top;
+}
+
+.dropbox__button {
+    margin-right: 0; // LESS Framework Reset
+}
+
+
+// Label
+.dropbox__label {
+    display: inline-block;
+    background-color: #f96042;
+    line-height: 46px;
+    color: #fff;
+    padding: 0 1em;
+    font-size: 14px;
+    position: relative;
+
+    @media @mobile {
+        font-size:  bkscale(@font__button--font-size, 0.88);
+    }
+}
+
+
+
+// #Click to Call
+// ------------------------------
+
+
+.widget__clicktocall {
+
+    .phone-number-link {
+        .button;
+    }
+}
+
+
+
+
+// ------------------------------
+// #Images
+// ------------------------------
+
+
+// Image Link
+.image-link {
+    display: inline-block;
+    overflow: visible;
+}
+
+
+// Image Figure
+.imagewidget__figure {
+    margin: 0;
+    text-align: center;
+}
+
+
+// Image Alignment
+.imagewidget__caption,
+.imagewidget {
+    text-align: center;
+}
+
+
+// Image Caption
+.imagewidget__caption {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    .flex-display;
+    .flex-direction(column);
+    .justify-content(center);
+
+    height: 100%;
+    margin: 0;
+    padding: 30px;
+    background-color: fade(@color__slideshow-caption--background, 70%);
+    text-align: center;
+
+    @media @bp-global-medium {
+        padding: 10px 25px 15px;
+    }
+
+    @media @bp-global-small {
+        padding: 5px 20px 5px;
+    }
+}
+
+
+// Image Title
+.imagewidget .image-title:after {
+    margin: 0 auto;
+}
+
+
+
+
+// -----------------------------
+// #Divider (Keyline)
+// -----------------------------
+
+
+.widget__line {
+    line-height: 0;
+}
+
+hr.rule {
+    height: 3px;
+    background-color: darken(@color__body--background, 5%);
+}

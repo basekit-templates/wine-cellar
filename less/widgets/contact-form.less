@@ -1,0 +1,122 @@
+// ---------------------------------------------------
+// Wine Cellar Template: CSS > Widgets > Contact Form
+// ---------------------------------------------------
+
+
+
+
+// Fieldset
+// ------------------------------
+
+
+.contactform__fieldset {
+	position: relative;
+    background-color: @color__form--background;
+    .boxshadow;
+}
+
+
+
+
+// Form Group
+// ------------------------------
+
+
+.form-group {
+	margin-bottom: 20px;
+
+	@media @mobile {
+		margin-bottom: 10px;
+	}
+
+
+	&:last-of-type {
+		margin-bottom: 0;
+		text-align: right;
+	}
+
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #fff;
+}
+:placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+  color:    #fff;
+}
+
+
+
+
+// Form Body
+// ------------------------------
+
+
+.contactform__form-body {
+	margin: 0 0 0 auto;
+	padding: 20px 50px;
+
+    @media @tablet {
+        padding: 0 20px 20px;
+    }
+    @media @bp-global-small {
+        padding: 0 20px 20px;
+        width: auto;
+    }
+}
+
+
+
+
+// Legend
+// ------------------------------
+
+
+.contactform__legend {
+	padding: 26px;
+	color: @color__form-legend--text;
+	width: 100%;
+	font-family: @font__h3--font-family;
+	font-size: @font__h3--font-size;
+	line-height: @font__h3--line-height;
+	text-align: left;
+
+	@media @bp-global-small {
+		position: relative;
+		width: 100%;
+		text-align: left;
+		margin-bottom: 20px;
+		padding: 10px 20px;
+	    font-size: 20px;
+	    line-height: 24px;
+	}
+}
+
+
+
+
+
+// Label
+// ------------------------------
+
+
+.label--message {
+	 @media @mobile {
+        font-size: bkscale(@font__p--font-size, 0.9);
+    }
+}
+
+
+
+
+
