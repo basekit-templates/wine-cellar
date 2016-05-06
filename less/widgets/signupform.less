@@ -6,6 +6,18 @@
 
 
 .widget__signupform {
+	.boxshadow;
+	padding: 60px;
+
+	&:after {
+		content: "\f044";
+    	font-family: fontawesome;
+    	position: absolute;
+    	top: 26%;
+    	right: 6%;
+    	font-size: 30px;
+    	color: #ddd;
+	}
 
 
 
@@ -14,19 +26,21 @@
 
 
 	.legend {
-		position: absolute;
-		top: 0;
-		right: auto;
-		bottom: 0;
-		left: 0;
-		padding: 0 26px;
 		color: @color__form-legend--text;
-		background-color: @color-swatch4;
-		font-family: @font__h2--font-family;
-		font-size: @font__h2--font-size;
-		line-height: bkscale(@font__button--font-size, 3);
-		height: bkscale(@font__button--font-size, 3);
-		text-align: right;
+		width: 100%;
+		font-family: @font__h1--font-family;
+		font-size: @font__h1--font-size;
+		line-height: @font__h1--line-height;
+		text-align: left;
+		margin-bottom: 20px;
+		&:after {
+        	height: 3px;
+        	display: block;
+        	width: 6%;
+        	background: @color__button--background;
+        	content: '';
+        	margin-top: 15px;
+    	}
 
 		@media @bp-global-small {
 			position: relative;
@@ -71,8 +85,6 @@
 		-webkit-align-content: stretch;
 		-ms-flex-line-pack: stretch;
 		align-content: stretch;
-		background-color: #f5f5f5;
-    	padding: 20px;
 
 	    @media @mobile {
 	    	display: block;
@@ -95,10 +107,17 @@
 			-webkit-flex: 1 1 auto;
 			-ms-flex: 1 1 auto;
 			flex: 1 1 auto;
-			margin-right: 10px;
+			margin-right: -10px;
 			@media @mobile {
 		    	margin-bottom: 10px;
 		    }
+		}
+
+		.input[type="email"] {
+			height: 52px;
+			box-shadow: none;
+			border-bottom: 1px solid #ddd;
+			padding: 0;
 		}
 
 	}

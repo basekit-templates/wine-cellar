@@ -119,214 +119,26 @@ body {
 }
 
 
-
-
-// ------------------------------
-// #Header / Footer
-// ------------------------------
-
-.template-header,
-.template-footer {
-    width: 100%;
-
-    // Flex Row
-	.row {
-		.justify-content(space-between);
-        .align-items(center);
-
-        @media @mobile {
-            display: block;
-        }
-	}
-
-	.col {
-		text-align: center;
-		line-height: 0;
-		font-size: 0;
-	}
-}
-
-
-
-
-// #Header
-// ------------------------------
-
-.template-header {
-	top: 0;
-	width: 100%;
-	max-width: @value__container--width;
-	background-color: @color__header--background;
-	border-bottom: 1px solid @color__site--border;
-	box-shadow: 0 0 16px rgba(110, 110, 110, 0.2);
-	line-height: 0;
-	text-align: center;
-
-	@media @tablet {
-		text-align: inherit;
-	}
-
-	.container {
-		@media @bp-1050 {
-			width: 100%;
-		}
-		@media @tablet {
-			.flex-display;
-			.justify-content(space-between);
-        	.align-items(center);
-			width: 100%;
-		}
-	}
-}
-
-
-
-
-// #Footer
-// ------------------------------
-
-.template-footer {
-	padding-top: 0px;
-	padding-bottom: 0px;
-	background-color: @color__footer--background;
-
-	.col:first-child {
-		text-align: left;
-	}
-	.col:last-child {
-		text-align: right;
-	}
-
-	@media @bp-1050 {
-		text-align: center;
-
-		.col {
-			.flex-basis(100%);
-		}
-		.col:first-child {
-			display: none;
-		}
-		.col:last-child {
-			margin-top: 20px;
-			text-align: center;
-		}
-	}
-
-	// Mini Navigation
-	.nav-item {
-		margin: 0 20px;
-
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-	.nav-link {
-		.heading--4;
-
-		&:hover {
-			color: #fff;
-		}
-	}
-    h4,
-    .nav-link {
-    	color: #8d8d8d;
+// Main Image
+.hero {
+    .imagewidget__caption {
+        background-color: fade(@color__image-caption--background, 30%);
+    }
+    
+    .imagewidget__image-title {
+        letter-spacing: 1px;
+        text-transform: none;
+        font-weight: 400;
+        color: @color-swatch4;
+    }
+    
+    .imagewidget__image-description {
+        font-size: 15px;
+        margin: 10px auto;
+        line-height: 30px;
+        max-width: 40%;
     }
 }
 
 
-
-
-// Logo
-// ------------------------------
-
-.logo {
-	display: block;
-    text-align: center;
-
-	@media @bp-1050 {
-		margin: 20px 0;
-	}
-	@media @tablet {
-		margin: 0;
-	}
-}
-
-// Logo Link
-.logo-link {
-	.transition(.6s);
-}
-
-
-
-
-// ------------------------------
-// Page Styles
-// ------------------------------
-
-
-// General Page Styles
-// ------------------------------
-
-.page {
-    .flex(1 1 auto);
-}
-
-
-
-
-// Page Title
-// ------------------------------
-
-.page-title {
-    background-position: bottom center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    padding: 9px 70px;
-    margin-bottom: 0;
-
-
-    // Typography
-    h1 {
-    	padding-bottom: 0;
-    	font-size: 30px;
-    	color: @color-swatch4;
-        margin-bottom: 0;
-
-    	@media @tablet {
-    		font-size: 26px;
-    	}
-    	@media @mobile {
-    		font-size: 22px;
-    	}
-
-    	&:after {
-    		display: none;
-    	}
-    }
-
-}
-
-// Page Title Content Wrap
-.page-title-content-wrap {
-	.flex-display;
-    .align-items(center);
-    .justify-content(center);
-	height: 350px;
-	margin-top: 61px;
-	padding: 20px;
-	background-color: fade(@color__feature-content--background, 70%);
-
-	@media @bp-1050 {
-		margin-top: 138px;
-    }
-	@media @tablet {
-		margin-top: 61px;
-		height: 220px;
-    }
-    @media @mobile {
-    	margin-top: 51px;
-		height: 130px;
-    }
-}
 

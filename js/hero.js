@@ -41,7 +41,7 @@ var scrollEffect = function (elem) {
 
 };
 
-var elem = document.querySelector('.content-inner-wrap');
+var elem = document.querySelector('.imagewidget__figure');
 
 
 window.onscroll = function(e) {
@@ -51,6 +51,6 @@ window.onscroll = function(e) {
 };
 
 $( window ).resize(function() {
-  checkFeatureDimensions();
+  checkimageDimensions();
 });
 
