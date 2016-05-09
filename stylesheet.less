@@ -7,6 +7,10 @@
     display: none!important;
 }
 
+.widget__menu {
+    display: none!important;
+}
+
 
 // ------------------------------
 // #Table of Contents
@@ -40,8 +44,6 @@
 
 @import "@{templateLocal}/less/plugins/plugin-blog.less";       // Plugin: Blog
 @import "@{templateLocal}/less/plugins/plugin-ecommerce.less";  // Plugin: Ecommerce
-
-@import "@{templateLocal}/less/nyane-fork.less";    // Fork Variables
 
 
 
@@ -86,6 +88,7 @@ body {
     height: 100%;
     min-height: 100%!important;
     background-color: @color__body--background;
+    max-width: 100%;
 
     @media @bp-global-above-fullwidth {
         max-width: @value__container--width;
@@ -118,27 +121,124 @@ body {
     background-color: @color__body--background;
 }
 
-
-// Main Image
-.hero {
-    .imagewidget__caption {
-        background-color: fade(@color__image-caption--background, 30%);
-    }
-    
-    .imagewidget__image-title {
-        letter-spacing: 1px;
-        text-transform: none;
-        font-weight: 400;
-        color: @color-swatch4;
-    }
-    
-    .imagewidget__image-description {
-        font-size: 15px;
-        margin: 10px auto;
-        line-height: 30px;
-        max-width: 40%;
+.page-container {
+    margin: 20px auto 0;
+    max-width: 75%;
+    width: 1024px;
+    @media @tablet {
+        max-width: 100%;
+        padding: 2%;
     }
 }
 
+.page--home {
+    .blogpostlist__post-items {
+        margin: 0px auto;
+        max-width: 100%;
+    }
+}
+
+
+// Main Image
+.hero {
+    position: relative;
+    text-align: center;
+    .imagewidget__caption {
+        background-color: fade(@color__image-caption--background, 30%);
+    }
+    .imagewidget__image-title,
+    .imagewidget__image-description {
+        display: none;
+    }
+}
+
+.hero-signup {
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    h1, h2, h3, h4, h5, p, a, span {
+        color: @font-swatch9-color;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+        font-size: @font__h1--font-size;
+        line-height: @font__h1--line-height;
+        max-width: 80%;
+        margin: 0px auto;
+    }
+    .signupform__legend {
+        display: none;
+    }
+    .homepage-header,
+    .homepage-content {
+        margin-bottom: 20px;
+    }
+    input[type="email"] {
+        padding: 20px;
+    }
+    .signupform__button {
+        height: 60px;
+        padding: 10px 30px;
+        border-radius: 0;
+    }
+}
+
+// Home Profile Widget
+.home-profile-widget {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+
+    .social-item {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+    }
+
+    .social-social-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 0;
+        background-color: transparent;
+        &:before {
+            background-color: transparent;
+            width: 44px;
+            height: 34px;
+            line-height: 24px;
+        }
+        &:after {
+            border-top: 10px solid transparent;
+        }
+    }
+
+    .social-link:hover {
+        background: transparent;
+        &:before {
+            background-color: transparent!important;
+        }
+        &:after {
+            border-top: 0;
+        }
+    }
+    
+    .social-link:hover:after {
+        border-left: solid transparent 15px;
+        border-right: solid transparent 15px;
+        border-bottom: solid #fff 20px;
+        bottom: -22px;
+        content: " ";
+        height: 0;
+        left: 50%;
+        margin-left: -15px;
+        position: absolute;
+        width: 0;
+    }
+}
 
 
