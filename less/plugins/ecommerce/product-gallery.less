@@ -1,0 +1,246 @@
+// ----------------------------------------------------------
+// Zest Template: CSS > Plugins > Ecommerce > Product Gallery
+// ----------------------------------------------------------
+
+.gallery-item.current {
+    .search--open &, .basket--open &, .navigation--open & {
+        z-index: auto;
+    }
+}
+
+.basket--open  {
+    .product-gallery .gallery-item.current {
+        z-index: auto;
+    }
+}
+
+
+
+// Product Gallery
+// ------------------------------
+
+
+.product-gallery {
+    .animation;
+    overflow: visible;
+    position: relative;
+    height: 0;
+    padding-bottom: 60%;
+    margin: 0;
+    z-index: 1;
+    @media @bp-global-small {
+        padding-bottom: 70%;
+    }
+
+
+
+    // Prev Next Buttons
+
+
+    .btnnext, .btnprev {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: fade(@color-swatch2, 0%);
+        width: 12%;
+        z-index: 1004;
+
+        overflow: hidden;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        cursor: pointer;
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+
+
+        &:after {
+            font-family: 'FontAwesome', sans-serif;
+            text-indent: 0;
+            display: block;
+            width: 2em;
+            height: 2em;
+            display: block;
+            text-align: center;
+            line-height: 2em;
+            font-size: 50px;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            color: fade(@color-swatch2, 20%);
+        }
+
+        .no-touch &:hover:after {
+            color: fade(@color-swatch2, 100%);
+        }
+    }
+
+    .btnnext {
+        right: 5.5%;
+         @media @bp-global-small {
+           right: 0;
+        }
+        &:after {
+            content: '\f105';
+        }
+    }
+
+    .btnprev {
+        left: 5.5%;
+         @media @bp-global-small {
+            left: 0;
+        }
+        &:after {
+            content: '\f104';
+        }
+    }
+
+
+    // Gallery Item
+
+    .gallery-item {
+        .animation;
+        display: block !important;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20%;
+        width: 60%;
+        background-color: blue;
+        display: block;
+        height: 100%;
+        z-index: 999;
+        background-color: #fff;
+        -webkit-transition: -webkit-transform 0.5s ease-in-out, -webkit-transform-origin 0.5s ease-in-out;
+        -moz-transition: -moz-transform  0.5s ease-in-out, -moz-transform-origin 0.5s ease-in-out;
+        -o-transition: -o-transform  0.5s ease-in-out, -o-transform-origin 0.5s ease-in-out;
+        transition: transform  0.5s ease-in-out, transform-origin 0.5s ease-in-out;
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(0) translate(0%, 0px);
+        -moz-transform: scale(0) translate(0%, 0px);
+        -o-transform: scale(0) translate(0%, 0px);
+        -ms-transform: scale(0) translate1(0%, 0px);
+        transform: scale(0) translate(0%, 0px);
+        box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.05);
+
+        @media @bp-global-small {
+            width: 70%;
+            left: 15%;
+        }
+
+        .image {
+            opacity: 0;
+            min-height: 20px; // fix for IE
+            -webkit-transition: opacity 0.5s ease;
+            -moz-transition: opacity 0.5s ease;
+            -o-transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease;
+            max-height: 100%;
+        }
+
+
+    }
+
+    // Current
+
+    .gallery-item.current {
+        z-index: 1002;
+        -webkit-transform: scale(1) translate(0%, 0px);
+        -moz-transform: scale(1) translate(0%, 0px);
+        -o-transform: scale(1) translate(0%, 0px);
+        -ms-transform: scale(1) translate1(0%, 0px);
+        transform: scale(1) translate(0%, 0px);
+
+        .image {
+            opacity: 1;
+        }
+
+
+    }
+
+    // Next, Previous
+
+    .gallery-item.next, .gallery-item.prev {
+
+        .image {
+            opacity: 0.5;
+        }
+
+    }
+
+    // Previous
+
+    .gallery-item.prev {
+        z-index: 1001;
+        -webkit-transform-origin: 0% 50%;
+        -moz-transform-origin: 0% 50%;
+        -o-transform-origin: 0% 50%;
+        -ms-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        -webkit-transform: scale(0.2) translate(-120%, 0px);
+        -moz-transform: scale(0.2) translate(-120%, 0px);
+        -o-transform: scale(0.2) translate(-120%, 0px);
+        -ms-transform: scale(0.2) translate1(-120%, 0px);
+        transform: scale(0.2) translate(-120%, 0px);
+
+    }
+
+    // Next
+
+    .gallery-item.next {
+         z-index: 1000;
+        -webkit-transform-origin: 100% 50%;
+        -moz-transform-origin: 100% 50%;
+        -o-transform-origin: 100% 50%;
+        -ms-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-transform: scale(0.2) translate(120%, 0px);
+        -moz-transform: scale(0.2) translate(120%, 0px);
+        -o-transform: scale(0.2) translate(120%, 0px);
+        -ms-transform: scale(0.2) translate1(120%, 0px);
+        transform: scale(0.2) translate(120%, 0px);
+
+    }
+
+    // Image Button
+
+    .image-button {
+        cursor: default;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}

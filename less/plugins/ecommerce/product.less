@@ -1,22 +1,8 @@
+
 // ------------------------------------------------
-// Scribe Template: CSS > Plugins > Ecommerce > Product
+// Zest Template: CSS > Plugins > Ecommerce > Product
 // ------------------------------------------------
 
-
-
-
-// ---------------------------------
-// Breakpoints for Product layouts
-// ---------------------------------
-
-
-
-
-@product-large: ~"only screen and (min-width : 769px)";
-@product-medium: ~"only screen and (max-width : 769px)";
-@product-small: ~"only screen and (max-width : 400px)";
-
-@bp-product-rows: ~"only screen and (max-width : 769px)";
 
 
 
@@ -39,10 +25,8 @@
 
 .product-article {
 
-    @media @bp-product-rows {
-        display: block;
-    }
 }
+
 
 
 
@@ -53,167 +37,12 @@
 
 
 
+
 // Product Images
 // ------------------------------
 
 
 .product-images {
-    padding: 1px 0;
-}
-
-
-
-
-// Product Gallery
-// ------------------------------
-
-
-.product-gallery {
-    overflow: hidden;
-    @media @bp-global-large {
-        position: absolute;
-        top: 70px;
-        left: 70px;
-        height: 560px;
-        margin: 0;
-    }
-
-    @media @bp-global-medium {
-        margin: 40px;
-        position: relative;
-        max-width: 390px;
-        overflow: hidden;
-        height: 60px;
-    }
-
-    @media @bp-global-small, @mobile {
-        margin: 20px;
-        position: relative;
-        max-width: 270px;
-        height: 40px;
-    }
-
-    // Gallery Item
-
-    .gallery-item {
-        font-size: 0;
-        position: relative;
-        background-color: #fff;
-        display: block;
-        border: 2px solid #fff;
-
-        @media @bp-global-large {
-            float: none;
-            margin-bottom: 16px;
-            line-height: 74px;
-        }
-
-        @media @bp-global-medium, @bp-global-small {
-            float: left;
-        }
-
-        @media @bp-global-medium {
-            width: 60px;
-            height: 60px;
-            line-height: 56px;
-            margin-right: 6px;
-        }
-        @media @bp-global-small {
-            width: 40px;
-            height: 40px;
-            line-height: 36px;
-            margin-right: 6px;
-        }
-    }
-
-    // Image Button
-
-    .image-button {
-        display: inline-block;
-        line-height: 76px;
-        height: 80px;
-        @media @bp-global-medium {
-            line-height: 56px;
-            height: 60px;
-        }
-        @media @bp-global-small {
-            line-height: 36px;
-            height: 40px;
-        }
-
-        // Image
-
-        .image {
-            line-height: 76px;
-            display: inline-block;
-            vertical-align: middle;
-            @media @bp-global-medium {
-                line-height: 56px;
-            }
-            @media @bp-global-small {
-                line-height: 36px;
-            }
-        }
-    }
-}
-
-
-// Custom Image Gallery Slider Button
-// ----------------------------------
-// Appended via JS
-
-.ecom-view-more {
-    .button;
-    background-color: lighten(desaturate(@color__primary, 80%), 14%);
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    text-align: center;
-    line-height: 80px;
-    bottom: 0;
-    left: 0;
-    -webkit-user-select: none;  /* Chrome all / Safari all */
-    -moz-user-select: none;     /* Firefox all */
-    -ms-user-select: none;      /* IE 10+ */
-    overflow: hidden;
-    text-indent: 150%;
-    z-index: 1000;
-    padding: 0;
-
-    &:hover {
-        background-color: lighten(desaturate(@color__primary, 80%), 14%);
-    }
-
-    @media @bp-global-medium {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        left: 330px;
-        top: 0;
-    }
-    @media @bp-global-small {
-        line-height: 40px;
-        width: 40px;
-        height: 40px;
-        left: 230px;
-        top: 0;
-    }
-
-    // Icon
-
-    &:after {
-        font-family: 'FontAwesome', sans-serif;
-        content: '\f078';
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-indent: 0;
-        width: 100%;
-        font-size: 18px;
-        @media @bp-global-medium, @bp-global-small {
-            content: '\f054';
-        }
-    }
 
 }
 
@@ -225,28 +54,24 @@
 
 
 .product-image {
-    background-color: #fff;
-    padding: 10px;
-
-    @media @bp-global-large {
-        margin: 70px 70px 70px 176px;
-
-    }
-    @media @bp-global-medium {
-        margin: 40px;
-    }
-    @media @bp-global-small {
-        margin: 20px;
-    }
-
-    body.product-one-image & {
-        @media @bp-global-large {
-            margin-left: 70px;
-        }
-    }
+    display: none;
 
     &.no-image {
-        display: none;
+        display: none !important;
+    }
+
+    .product--one-image & {
+        display: block;
+        height: 0;
+        width: 60%;
+        margin: 0 auto;
+        padding-bottom: 60%;
+        position: relative;
+
+        @media @bp-global-small {
+            width: 70%;
+            padding-bottom: 70%;
+        }
     }
 }
 
@@ -258,32 +83,18 @@
 
 
 .product-image .image-link {
+    position: absolute;
     display: block;
-    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position:  center;
     background-size: contain;
-    background-position: center;
+    box-shadow: 0px 11px 30px 0px rgba(213,213,213,0.18), inset 0px 0px 0px 1px rgba(0,0,0,0.05);
+    height: 100%;
     background-color: #fff;
-
-    @media @bp-global-large {
-        padding: 26px;
-        height: 400px;
-    }
-    @media @bp-global-medium {
-        padding: 20px;
-        height: 350px;
-    }
-    @media @bp-global-small {
-        padding: 10px;
-        height: 300px;
-    }
-    @media @mobile {
-        padding: 10px;
-        height: 200px;
-    }
 }
-
-
-
 
 // Image
 // ------------------------------
@@ -293,46 +104,81 @@
 }
 
 
-
-
 // Product Content
 // ------------------------------
 
 
 .product-content {
-    background: @color__body--background;
-    padding: 70px 30px;
 
-    @media @bp-global-medium {
-        padding: 40px;
-    }
-    @media @tablet {
-        padding: 0 20px 20px;
-    }
 }
 
-
-
-
-// Product Title
+// Product Header
 // ------------------------------
 
+.product-header {
+    .clearfix;
+    position: relative;
+    top: -1em;
+    z-index: 1;
 
-.product-title {
-    padding-bottom: 0;
-    color: @color__ecomproduct-title--text;
+    // Message
+
+    .message {
+        float: left;
+        clear: both;
+        margin: 0;
+    }
 }
 
+    // Product Title
+
+    .product-title {
+        font-size: bkscale(@font-swatch1-font-size, 1);
+        line-height: bkscale(@font-swatch1-line-height, 1);
+        font-weight: @font-swatch1-font-weight;
+        position: relative;
+        margin: 0;
+        color: @color-swatch1;
+        padding: 20px 30px;
+        background-color: fade(@color-swatch2, 80%);
+        line-height: inherit;
+        float: left;
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font-swatch1-font-size, 0.8);
+            line-height: bkscale(@font-swatch1-line-height, 0.8);
+        }
+
+        @media @bp-global-small {
+            font-size: bkscale(@font-swatch1-font-size, 0.7);
+            line-height: bkscale(@font-swatch1-line-height, 0.7);
+        }
+    }
+
+    // Product Price
+
+    .ecomproduct__product-price {
+        color: @font-swatch5-color;
+        background-color:  darken(fade(@color-swatch1, 90%), 3%);
+        padding: 0.3em 14px;
+        float: left;
+        clear: both;
+        font-size: bkscale(@font-swatch3-font-size, 1);
+        line-height: bkscale(@font-swatch3-line-height, 1);
+
+        @media @bp-global-medium {
+            font-size: bkscale(@font-swatch3-font-size, 0.8);
+            line-height: bkscale(@font-swatch3-line-height, 0.8);
+        }
+
+        @media @bp-global-small {
+            font-size: bkscale(@font-swatch3-font-size, 0.7);
+            line-height: bkscale(@font-swatch3-line-height, 0.7);
+        }
+
+    }
 
 
-
-// Product Price
-// ------------------------------
-
-
-.ecomproduct__product-price {
-    color: @color__ecomproduct-price--text;
-}
 
 
 
@@ -342,14 +188,20 @@
 
 
 .product-body {
+    clear: both;
 
-    margin: 16px 0 24px;
+    margin: 20px 0;
 
     // Paragraph
+
     &, p {
+        @media @bp-global-medium {
+            font-size: bkscale(@font-swatch5-font-size, 0.9);
+            line-height: bkscale(@font-swatch5-line-height, 0.9);
+        }
         @media @bp-global-small {
-            font-size: bkscale(@font__p--font-size, 0.9);
-            line-height: bkscale(@font__p--line-height, 0.9);
+            font-size: bkscale(@font-swatch5-font-size, 0.8);
+            line-height: bkscale(@font-swatch5-line-height, 0.8);
         }
     }
 }
@@ -363,25 +215,22 @@
 
 
 .product-actions {
-    margin-bottom: 2em;
+    margin: 0 0 30px 0;
 
 
 
 
-    // Select Wrap
+    // Add to Basket Button
     // ------------------------------
 
-    .select-wrap {
-        margin-top: 6px;
-        padding: 4px 20px 0px 14px;
-        background-color: @color__button--background;
-
-        &:after {
-            padding-right: 14px;
+    .form .button {
+        &.added {
+            background-color: @color-swatch1;
+            box-shadow: none;
+            &:before {
+                content: '\f00c'
+            }
         }
-    }
-    .select {
-        padding-right: 20px;
     }
 
 
@@ -390,7 +239,7 @@
     // Legend
     // ------------------------------
 
-    .legend {
+    legend {
         display: none;
     }
 
@@ -401,7 +250,7 @@
     // ------------------------------
 
     .fieldset {
-        margin-bottom: 2em;
+        margin-bottom: 20px;
     }
 
 
@@ -414,7 +263,7 @@
     .form-group {
         display: inline-block;
         min-width: 100px;
-        margin: 0 0.6em 0 0;
+        margin: 0 0.6em 1em 0;
         float: left;
 
 
@@ -423,18 +272,26 @@
         // Label
         // ------------------------------
 
+
         .label {
-            padding: 5px 0;
-            font-family: @font__h4--font-family;
-            font-size: 12px;
-            letter-spacing: 2px;
+            font-size: 13px;
             line-height: 1;
-            color: lighten(@color__p--text, 20%);
+            color: fade(@font-swatch5-color, 70%);
             display: block;
-            margin-bottom: 5px;
-            text-transform: uppercase;
+            padding-bottom: 0;
         }
     }
+}
+
+
+
+
+// ------------------------------
+// Basket Wrap
+// ------------------------------
+
+
+.view-basket-wrap {
 }
 
 
@@ -455,12 +312,11 @@
 
 
     .product-attribute-title {
-        line-height: 2;
-        color: fade(@color__p--text, 80%);
-        padding: 0;
-        display: block;
-        margin: 0 0 0.25em 0;
         font-size: 13px;
+        line-height: 1.5;
+        color: fade(@font-swatch5-color, 40%);
+        display: block;
+        padding-bottom: 0.5em;
     }
 
 
@@ -496,11 +352,10 @@
 
 
     .product-category, .product-tags {
-        display: block;
+        display: inline-block;
         vertical-align: top;
         line-height: 1;
-        margin: 0 0 1em 0;
-
+        margin: 0 2em 1em 0;
 
         // P
 
@@ -517,17 +372,26 @@
 
 
     .category-link, .tag-link {
-        .underline;
-        font-size: 14px;
+        font-size: @font-swatch7-font-size;
+        font-family: @font-swatch7-font-family;
+        font-weight: @font-swatch7-font-weight;
+        box-shadow: inset 0px -1px 0px 0px @color-swatch2;
+        display: inline-block;
+        line-height: 1.8;
+        margin-top: 0.5em;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
 
-        @media @bp-global-medium {
-            font-size: bkscale(@font__p--font-size, 0.9);
-            line-height: bkscale(@font__p--line-height, 0.9);
+        &:hover {
+            box-shadow: inset 0px -1px 0px 0px @color-swatch2, 0px 0px 0px 5px fade(@color-swatch2, 7%);
+            background-color: fade(@color-swatch2, 7%);
         }
 
-        @media @bp-global-small {
-            font-size: bkscale(@font__p--font-size, 0.8);
-            line-height: bkscale(@font__p--line-height, 0.8);
+        &:first-letter {
+            text-transform: uppercase;
         }
     }
 }
+
