@@ -82,7 +82,11 @@
     display: none;
     margin: 0;
     padding: 20px;
-    background-color: fade(@color-swatch1, 75%)
+    background-color: fade(@color-swatch4, 25%);
+            -webkit-transition: all 0.6s ease-in-out;
+        -moz-transition: all 0.6s ease-in-out;
+        -o-transition: all 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
 }
 
 // Show Caption
@@ -123,10 +127,9 @@
     -ms-flex-align: center;
     align-items: center;
     opacity: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.9);
+            -moz-box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.9);
+            -webkit-box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.9);
     z-index: 9999;
     &:hover {
         opacity: 1;
@@ -206,7 +209,6 @@
 }
 
 .gallery__caption {
-    border: 1px solid @color-swatch7;
     padding: 10px;
     margin: 0;
     .image-title,
@@ -242,3 +244,6 @@
     background-color: transparent;
     border: 0;
 }
+
+
+
