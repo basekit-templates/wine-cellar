@@ -82,9 +82,9 @@
         },
         "font8": {
             "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "14px",
+            "font-size": "24px",
             "font-weight": "400",
-            "line-height": "24px",
+            "line-height": "34px",
             "color": "@color-swatch1",
             "letter-spacing": "inherit"
         },

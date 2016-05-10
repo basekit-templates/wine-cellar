@@ -10,19 +10,9 @@
 
 // Gallery List
 .gallery-list {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    .flex-display(@display: flex);
+    .flex-wrap(@wrap: wrap);
+    .justify-content(@justify: space-between);
 }
 
 // Gallery Item
@@ -36,12 +26,12 @@
             width: 48%;
         }
         .image-title {
-            font-family:@font-swatch9-font-family;
-            font-size:@font-swatch9-font-size;
-            font-weight: @font-swatch9-font-weight;
-            line-height:@font-swatch9-line-height;
-            color: @font-swatch9-color;
-            letter-spacing: @font-swatch9-letter-spacing;
+            font-family:@font-swatch8-font-family;
+            font-size:@font-swatch8-font-size;
+            font-weight: @font-swatch8-font-weight;
+            line-height:@font-swatch8-line-height;
+            color: @font-swatch5-color;
+            letter-spacing: @font-swatch8-letter-spacing;
         }
         .image-description {
             font-family:@font-swatch5-font-family;
@@ -82,11 +72,11 @@
     display: none;
     margin: 0;
     padding: 20px;
-    background-color: fade(@color-swatch4, 25%);
-            -webkit-transition: all 0.6s ease-in-out;
-        -moz-transition: all 0.6s ease-in-out;
-        -o-transition: all 0.6s ease-in-out;
-        transition: all 0.6s ease-in-out;
+    background-color: fade(@color-swatch1, 25%);
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 // Show Caption
@@ -98,38 +88,20 @@
     width: 100%;
     height: 100%;
     padding: 25px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+    .flex-display(@display: flex);
     -webkit-box-direction: normal;
     -moz-box-direction: normal;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-flex-wrap: nowrap;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-align-content: stretch;
-    -ms-flex-line-pack: stretch;
-    align-content: stretch;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    .flex-direction(@direction: column);
+    .flex-wrap(@wrap: nowrap);
+    .justify-content(@justify: center);
+    .align-content(@align: stretch);
+    .align-items(@align: stretch);
     opacity: 0;
-box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.9);
-            -moz-box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.9);
-            -webkit-box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.9);
+    box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow:inset 0px 0px 120px rgba(255, 255, 255, 0.5);
     z-index: 9999;
     &:hover {
         opacity: 1;

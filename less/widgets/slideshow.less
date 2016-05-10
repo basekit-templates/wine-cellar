@@ -162,6 +162,24 @@
 		line-height: 50px;
 		font-size: 36px;
 
+		&:hover {
+			background-color: transparent!important;
+			&:before {
+				transform: initial;
+			}
+		}
+
+		&:focus {
+			&:before {
+				transform: initial;
+			}
+		}
+
+		&:active {
+			&:before {
+				transform: initial;
+			}
+		}
 
 		@media @bp-global-small {
 			width: 40px;
@@ -173,6 +191,7 @@
 			margin: 0;
 			color: #eee;
 			background-color: transparent;
+			border-color: transparent!important;
 		}
 	}
 
@@ -211,10 +230,11 @@
 
 	// Icon
 	&:before {
-		content: '\f104';
-		display: block;
-		margin: 0;
-		color: #eee
+		content: '\f104'!important;
+		display: block!important;
+		margin: 0!important;
+		color: #eee!important;
+		border-color: transparent!important;
 	}
 }
 
@@ -234,11 +254,12 @@
 
 	// Icon
 	&:after {
-		content: '\f105';
-		display: block;
-		margin: 0;
-		padding-left: 0.1em;
-		color: #eee
+		content: '\f105'!important;
+		display: block!important;
+		margin: 0!important;
+		padding-left: 0.1em!important;
+		color: #eee!important;
+		border-color: transparent!important;
 	}
 }
 
@@ -270,9 +291,13 @@
 
 	&.pause:before {
 		content: '\f04b';
+		border-color: transparent!important;
 	}
 }
 
+.icon--pause:before {
+	content: '\f04c';
+}
 
 
 
@@ -390,6 +415,9 @@
 	.button {
 		opacity: .4;
 		background-color: @color__body--background;
+		&:before {
+			display: none;
+		}
 	}
 
 	// Selected Button
