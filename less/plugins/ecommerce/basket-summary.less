@@ -8,10 +8,13 @@
 // ------------------------------
 
 
-
-
 @basketsummary-medium: ~"only screen and (max-width : 680px)";
 
+
+.ecombasketsummary {
+    padding: 40px;
+    .boxshadow;
+}
 
 
 
@@ -83,20 +86,6 @@
             }
         }
     }
-
-
-
-
-    // Product Item Row
-    // ------------------------------
-
-
-    .table-row:not(.table-row--heading):not(.table-row--order-total) {
-        .cell  {
-            background-color: @color__secondary;
-        }
-    }
-
 
 
 
@@ -246,6 +235,9 @@
         line-height: 30px;
         text-align: center;
         background-color: darken(@color__button--background, 5%);
+        &:before {
+            display: none;
+        }
     }
 
     // Quantity Field
@@ -284,7 +276,6 @@
     }
 
     .button--submit {
-        background-color: @color__primary;
         color: @color__body--background;
     }
 }
