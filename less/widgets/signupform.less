@@ -1,6 +1,6 @@
-// ---------------------------------------------
+// ---------------------------------------------------
 // Wine Cellar Template: CSS > Widgets > Sign Up Form
-// ---------------------------------------------
+// ---------------------------------------------------
 
 
 
@@ -62,29 +62,15 @@
 
 
 	.form-body {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
+        .flex-display(@display: flex);
 		-webkit-box-direction: normal;
 		-moz-box-direction: normal;
 		-webkit-box-orient: horizontal;
 		-moz-box-orient: horizontal;
-		-webkit-flex-direction: row;
-		-ms-flex-direction: row;
-		flex-direction: row;
-		-webkit-flex-wrap: nowrap;
-		-ms-flex-wrap: nowrap;
-		flex-wrap: nowrap;
-		-webkit-box-pack: start;
-		-moz-box-pack: start;
-		-webkit-justify-content: flex-start;
-		-ms-flex-pack: start;
-		justify-content: flex-start;
-		-webkit-align-content: stretch;
-		-ms-flex-line-pack: stretch;
-		align-content: stretch;
+        .flex-direction(@direction: row); 
+        .flex-wrap(@wrap: nowrap);
+        .justify-content(@justify: flex-start);
+		.align-content(@align: stretch);
 
 	    @media @mobile {
 	    	display: block;
@@ -102,11 +88,7 @@
 		margin-bottom: 0;
 
 		&:first-child {
-			-webkit-box-flex: 0;
-			-moz-box-flex: 0;
-			-webkit-flex: 1 1 auto;
-			-ms-flex: 1 1 auto;
-			flex: 1 1 auto;
+            .flex(@columns: 1 1 auto); 
 			margin-right: -10px;
 			@media @mobile {
 		    	margin-bottom: 10px;

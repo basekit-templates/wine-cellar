@@ -1,2 +1,3 @@
-# variable-template
-Variable template showing new v2 variables for style editor
+# Wine Cellar
+
+Basekit v8 Template

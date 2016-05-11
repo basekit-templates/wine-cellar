@@ -1,20 +1,6 @@
 // ---------------------------------------------------------
-// Scribe Template: CSS > Plugins > Ecommerce > Products Listing
+// Wine Cellar Template: CSS > Plugins > Ecommerce > Products Listing
 // ---------------------------------------------------------
-
-
-
-
-
-// Product Listing Title
-// ------------------------------
-
-
-.ecomproductslist__listing-title {
-    display: none;
-}
-
-
 
 
 // ------------------------------
@@ -46,7 +32,6 @@
     // Fieldset Search
 
     .fieldset--search {
-        padding: 20px 40px;
         width: 33.33%;
 
         @media (max-width: 1024px) {
@@ -70,7 +55,6 @@
 // ------------------------------
 
 .product-filters {
-    border-bottom: 1px solid darken(@color__body--background, 10%);
 
     .form-group {
         margin-right: 0;
@@ -79,7 +63,7 @@
 
 
 .ecomproductslist__fieldset--filters {
-    padding: 12px 70px 8px;
+    padding: 12px 70px 0;
     width: 66.66%;
     // background-color: @color__ecomproductslist-filters--background;
 
@@ -179,6 +163,7 @@
         display: block;
         margin-bottom: 5px;
         text-transform: uppercase;
+        top: -20px;
     }
 
     // Select Wrap
@@ -316,15 +301,21 @@
     .input {
         padding-left: 14px;
         box-shadow: none;
-        background-color: @color__secondary;
+        border-bottom: 1px solid #ddd;
+        height: 52px;
+
+        @media @bp-global-medium {
+            height: 44px;
+        }
+
         .heading--4;
         font-size: 14px;
     }
 
 
     .button--submit {
-        border-left: 1px solid darken(@color__secondary, 8%);
         line-height: 44px;
+        border-radius: 0!important;
 
         @media @bp-global-medium {
             width: 50px;
@@ -332,6 +323,10 @@
             display: block;
             position: relative;
             padding: 0;
+
+            &:before {
+                left: calc(30%);
+            }
 
             &:after {
                 content: '\f002';
@@ -412,8 +407,6 @@
 
 
 .product-item {
-    border-right: 1px solid fade(@color__p--text, 16%);
-    box-shadow: inset 0px 0px 0px 0px fade(@color__p--text, 16%);
 
     @media @bp-global-large {
         padding: 40px;

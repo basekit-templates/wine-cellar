@@ -13,21 +13,18 @@
 
     {% include "includes/header.twig" %}
 
-            <!-- Feature Arrow -->
     <div class="hero-signup">
 
-    <div class="homepage-header">
-        {{widget('content', 'homepage-header', {
-            content: '<h1>Lorem ipsum dolor anim sit amet</h1>'
-        })|raw}}
-    </div>
-
-
-    <div class="homepage-content">    
-        {{widget('content', 'homepage-content', {
-          content: '<h4>Commodo Labore et Anim</h4>'
-        })|raw}}
-    </div>
+        <div class="homepage-header">
+            {{widget('content', 'homepage-header', {
+                content: '<h1>Lorem ipsum dolor anim sit amet</h1>'
+            })|raw}}
+        </div>
+        <div class="homepage-content">    
+            {{widget('content', 'homepage-content', {
+              content: '<h4>Commodo Labore et Anim</h4>'
+            })|raw}}
+        </div>
 
         {{widget('profile', 'form', { 'profileType':'form'})|raw}}
 
