@@ -204,6 +204,7 @@ button,
     padding: 0 1em;
     font-size: 14px;
     position: relative;
+    top: 3px;
 
     @media @mobile {
         font-size:  bkscale(@font__button--font-size, 0.88);
@@ -218,11 +219,24 @@ button,
 
 .widget__clicktocall {
 
+    .label {
+        position: relative;
+        top: 0;
+        padding-left: 0;
+    }
+
     .phone-number-link {
+        &:before {
+            position: initial!important;
+            border-width: 10px 5px 0 10px!important;
+        }
         .button;
     }
 }
 
+        .icon--phone:before {
+            content: "\f095"!important;
+        }
 
 
 

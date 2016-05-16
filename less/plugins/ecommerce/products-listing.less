@@ -14,7 +14,7 @@
 // ------------------------------
 
 
-.widget__ecomproductslist .form {
+ .widget__ecomproductslist .form {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -315,7 +315,9 @@
 
     .button--submit {
         line-height: 44px;
-        border-radius: 0!important;
+        &:before {
+            left: calc(38%);
+        }
 
         @media @bp-global-medium {
             width: 50px;
@@ -569,6 +571,10 @@
 .pagination-list {
     margin-top: 20px;
     text-align: center;
+}
+
+.ecomproductslist__button {
+    padding: 10px 30px;
 }
 
 
