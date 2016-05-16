@@ -169,9 +169,12 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    max-width: 75%;
+    margin: 0px auto;
 
     @media @tablet {
         top: 30%;
+        max-width: 100%;
     }
 
     @media @tablet {
@@ -205,9 +208,11 @@ body {
     .signupform__legend {
         display: none;
     }
-    .homepage-header,
-    .homepage-content {
+    .homepage-header {
         margin-bottom: 20px;
+    }
+    .homepage-content {
+        margin-bottom: 10px;
     }
     input[type="email"] {
         padding: 20px;
@@ -216,6 +221,9 @@ body {
         height: 50px;
         padding: 0px 20px;
         border-radius: 0;
+    }
+    .profile .tweet-item {
+        background-color: transparent;
     }
 }
 
