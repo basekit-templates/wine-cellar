@@ -137,7 +137,6 @@ body {
     }
     @media @mobile {
         order: 1;
-        padding: 0!important;
         background-color: @color__header--background;
         border-bottom: 1px solid lighten(@color__header--background, 5%);
     }
@@ -184,7 +183,10 @@ body {
         @media @tablet {
             width: 40%;
 
-            &:first-child,
+            &:first-child {
+                width: 100%;
+            }
+            
             &:last-child {
                 width: 30%;
             }
@@ -192,14 +194,7 @@ body {
         @media @mobile {
             width: 100%;
 
-            &:first-child {
-                .flex-display;
-                .flex-direction(column);
-                .justify-content(center);
-                width: 80%;
-                padding: 0;
-                min-height: 43px;
-            }
+
             &:last-child {
                 position: absolute;
                 top: -2px;

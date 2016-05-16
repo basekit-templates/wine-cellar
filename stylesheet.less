@@ -175,9 +175,6 @@ body {
     @media @tablet {
         top: 30%;
         max-width: 100%;
-    }
-
-    @media @tablet {
         position: relative;
         background-color: @color__header--background;
         padding: 20px 20px 80px 20px;
@@ -193,6 +190,7 @@ body {
         max-width: 80%;
         margin: 0px auto;
         @media @bp-global-medium {
+            max-width: 100%;
             font-size: bkscale(@font__h1--font-size, 0.8);
             line-height: bkscale(@font__h1--line-height, 0.8);
         }
@@ -258,6 +256,7 @@ body {
             line-height: 24px;
             @media @mobile {
                 width: 28px;
+                height: 28px;
             }
         }
         &:after {
