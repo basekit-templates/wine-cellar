@@ -289,3 +289,25 @@ body {
         padding-top: 0;
     }
 }
+
+// Default Page Title
+.template-title {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    margin-top: 40px;
+}
+
+.template-title h2 {
+    &:after {
+        border-top: 3px solid @color-swatch3;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 25px auto 5px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 5%;
+    }
+}
