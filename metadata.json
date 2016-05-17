@@ -37,17 +37,17 @@
         },
         "font3": {
             "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "24px",
+            "font-size": "28px",
             "font-weight": "400",
-            "line-height": "32px",
+            "line-height": "36px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font4": {
             "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "20px",
+            "font-size": "24px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "32px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -229,7 +229,7 @@
         "ecommerce": {
             "color__ecomproductslist-product-title--text" : "@color__p--text",
             "color__ecomproduct-title--text" : "@color__h2--text",
-            "color__ecomproduct-price--text" : "@color__p--text"
+            "color__ecomproduct-price--text" : "@color__link--text"
         }
     }
 }

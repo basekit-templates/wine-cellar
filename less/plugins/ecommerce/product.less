@@ -16,7 +16,6 @@
 }
 
  .ecom-product {
-    padding: 2%;
     .clearfix
  }
 
@@ -137,20 +136,22 @@
     // Product Title
 
     .product-title {
-        font-size: @font-swatch2-font-size;
-        font-family: @font-swatch3-font-family;
-        line-height: @font-swatch2-line-height;
-        font-weight: 300;
+        font-size: @font__h2--font-size;
+        font-family: @font__h2--font-family;
+        line-height: @font__h2--line-height;
+        font-weight: @font__h2--font-weight;
+        color: @color__ecomproduct-title--text;
     }
 
     // Product Price
 
     .ecomproduct__product-price {
-        font-size: @font-swatch1-font-size;
-        font-family: @font-swatch3-font-family;
-        line-height: @font-swatch1-line-height;
-        font-weight: 700;
+        font-size: @font__h4--font-size;
+        font-family: @font__h4--font-family;
+        line-height: @font__h4--line-height;
+        font-weight: @font__h4--font-weight;
         font-style: italic;
+        color: @color__ecomproduct-price--text;
     }
 
 
@@ -164,9 +165,10 @@
 
 .product-body {
     clear: both;
-    margin: 20px 0;
+    max-width: 60%;
+    margin: 20px auto;
     @media @tablet {
-        margin: 0 0 20px 0;
+        max-width: 100%;
     }
 }
 
@@ -227,8 +229,7 @@
     .form-group {
         display: inline-block;
         min-width: 100px;
-        margin: 0 0.6em 1em 0;
-        float: left;
+        float: center;
 
 
 
@@ -244,6 +245,10 @@
             display: block;
             padding-bottom: 0;
             margin-bottom: 10px;
+            position: relative;
+            top: 0;
+            left: 0;
+            padding-left: 0;
         }
     }
 }
