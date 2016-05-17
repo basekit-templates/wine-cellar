@@ -11,8 +11,7 @@
 //  #Site Styles
 //  #Page Styles
 //  #Header
-//  #Footer
-//  #Buttons
+//  #Default Page
 
 
 
@@ -77,37 +76,6 @@ body {
 }
 
 
-// Page Title
-.pagetitle {
-    padding: 9px 0px;
-    text-align: left;
-
-    @media @tablet {
-        padding: 6px 0px;
-        text-align: center;
-    }
-    @media @mobile {
-        padding: 6px 0px;
-    }
-}
-
-// Page Title Text
-.pagetitle-text {
-    padding-bottom: 0;
-    font-size: 30px;
-    margin-bottom: 0;
-    h1 {
-        margin-bottom: 0;
-    }
-
-    @media @mobile {
-        font-size: bkscale(@font__h4--font-size, 0.7);
-        line-height: bkscale(@font__h4--line-height, 0.7);
-        text-align: center;
-    }
-}
-
-
 
 
 // ------------------------------
@@ -120,7 +88,7 @@ body {
     z-index: 99999 !important;
     width: 100%;
     padding: 30px 0px 0px 30px;
-    background-color: transparent!important;
+    background-color: transparent;
     max-width: 100%;
     border-bottom: 0 solid transparent!important;
     box-shadow: none!important;
@@ -211,10 +179,10 @@ body {
 // For default page and when feature is hidden
 .widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
 .page--default .template-header {
-    position: absolute;
+    position: relative;
     z-index: inherit;
     width: 100%;
-    background-color: @color__header--background!important;
+    background-color: @color__header--background;
     min-height: auto;
     border-bottom: 1px solid darken(@color__body--background, 10%);
     padding: 30px 0 30px 30px;
@@ -306,8 +274,13 @@ body {
     }
 }
 
+
+// Default Page
+// ------------------------------
+
 .page--default .template-header {
     position: relative;
+    background-color: @color__header--background;
 }
 
 .page--default {
