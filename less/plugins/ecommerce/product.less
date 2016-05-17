@@ -1,6 +1,6 @@
-// ---------------------------------------------------------
-// Wine Cellar Template: CSS > Plugins > Ecommerce > Product
-// ---------------------------------------------------------
+// ------------------------------------------------
+// Couture Template: CSS > Plugins > Ecommerce > Product
+// ------------------------------------------------
 
 
 
@@ -10,11 +10,15 @@
 // ------------------------------
 
 
-.ecomproduct {
-
+.ecomproduct__gallery-item.next .ecomproduct__image,
+.ecomproduct__gallery-item.prev .ecomproduct__image {
+    display: none;
 }
 
-
+ .ecom-product {
+    padding: 2%;
+    .clearfix
+ }
 
 
 // ------------------------------
@@ -62,13 +66,12 @@
     .product--one-image & {
         display: block;
         height: 0;
-        width: 60%;
         margin: 0 auto;
         padding-bottom: 60%;
         position: relative;
 
         @media @bp-global-small {
-            width: 70%;
+            width: 100%;
             padding-bottom: 70%;
         }
     }
@@ -90,9 +93,8 @@
     left: 0;
     background-position:  center;
     background-size: contain;
-    box-shadow: 0px 11px 30px 0px rgba(213,213,213,0.18), inset 0px 0px 0px 1px rgba(0,0,0,0.05);
     height: 100%;
-    background-color: #fff;
+    background-color: @color-swatch1;
 }
 
 // Image
@@ -126,55 +128,29 @@
         float: left;
         clear: both;
         margin: 0;
+        @media @tablet {
+            float: initial;
+        }
     }
 }
 
     // Product Title
 
     .product-title {
-        font-size: bkscale(@font-swatch1-font-size, 1);
-        line-height: bkscale(@font-swatch1-line-height, 1);
-        font-weight: @font-swatch1-font-weight;
-        position: relative;
-        margin: 0;
-        color: @color-swatch1;
-        padding: 20px 30px;
-        background-color: fade(@color-swatch2, 80%);
-        line-height: inherit;
-        float: left;
-
-        @media @bp-global-medium {
-            font-size: bkscale(@font-swatch1-font-size, 0.8);
-            line-height: bkscale(@font-swatch1-line-height, 0.8);
-        }
-
-        @media @bp-global-small {
-            font-size: bkscale(@font-swatch1-font-size, 0.7);
-            line-height: bkscale(@font-swatch1-line-height, 0.7);
-        }
+        font-size: @font-swatch2-font-size;
+        font-family: @font-swatch3-font-family;
+        line-height: @font-swatch2-line-height;
+        font-weight: 300;
     }
 
     // Product Price
 
     .ecomproduct__product-price {
-        color: @font-swatch5-color;
-        background-color:  darken(fade(@color-swatch1, 90%), 3%);
-        padding: 0.3em 14px;
-        float: left;
-        clear: both;
-        font-size: bkscale(@font-swatch3-font-size, 1);
-        line-height: bkscale(@font-swatch3-line-height, 1);
-
-        @media @bp-global-medium {
-            font-size: bkscale(@font-swatch3-font-size, 0.8);
-            line-height: bkscale(@font-swatch3-line-height, 0.8);
-        }
-
-        @media @bp-global-small {
-            font-size: bkscale(@font-swatch3-font-size, 0.7);
-            line-height: bkscale(@font-swatch3-line-height, 0.7);
-        }
-
+        font-size: @font-swatch1-font-size;
+        font-family: @font-swatch3-font-family;
+        line-height: @font-swatch1-line-height;
+        font-weight: 700;
+        font-style: italic;
     }
 
 
@@ -188,20 +164,9 @@
 
 .product-body {
     clear: both;
-
     margin: 20px 0;
-
-    // Paragraph
-
-    &, p {
-        @media @bp-global-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.9);
-            line-height: bkscale(@font-swatch5-line-height, 0.9);
-        }
-        @media @bp-global-small {
-            font-size: bkscale(@font-swatch5-font-size, 0.8);
-            line-height: bkscale(@font-swatch5-line-height, 0.8);
-        }
+    @media @tablet {
+        margin: 0 0 20px 0;
     }
 }
 
@@ -224,7 +189,7 @@
 
     .form .button {
         &.added {
-            background-color: @color-swatch1;
+            background-color: @color-swatch2;
             box-shadow: none;
             &:before {
                 content: '\f00c'
@@ -278,6 +243,7 @@
             color: fade(@font-swatch5-color, 70%);
             display: block;
             padding-bottom: 0;
+            margin-bottom: 10px;
         }
     }
 }
@@ -337,13 +303,6 @@
     // ------------------------------
 
 
-    .tag-item {
-        line-height: 1;
-        margin-right: 1em;
-        margin-bottom: 0.5em;
-    }
-
-
 
 
     // Product Category, Product Tags
@@ -363,7 +322,11 @@
         }
     }
 
-
+    .product-category {
+        @media @tablet {
+            margin: 0 10px 0 0;
+        }
+    }
 
 
     // Category Link, Tag Link
@@ -374,7 +337,6 @@
         font-size: @font-swatch7-font-size;
         font-family: @font-swatch7-font-family;
         font-weight: @font-swatch7-font-weight;
-        box-shadow: inset 0px -1px 0px 0px @color-swatch2;
         display: inline-block;
         line-height: 1.8;
         margin-top: 0.5em;
@@ -384,8 +346,8 @@
         transition: all 0.2s ease-in-out;
 
         &:hover {
-            box-shadow: inset 0px -1px 0px 0px @color-swatch2, 0px 0px 0px 5px fade(@color-swatch2, 7%);
-            background-color: fade(@color-swatch2, 7%);
+            border-bottom: 3px solid @color-swatch3;
+            text-decoration: none;
         }
 
         &:first-letter {
@@ -393,4 +355,3 @@
         }
     }
 }
-
