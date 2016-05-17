@@ -128,8 +128,7 @@ body {
     @media @bp-global-below-fullwidth {
         width: 100%;
     }
-    @media @bp-global-medium {
-    }
+
     @media @tablet {
         padding: 20px;
         width: 100%;
@@ -215,9 +214,10 @@ body {
     position: absolute;
     z-index: inherit;
     width: 100%;
-    background-color: @color__body--background;
+    background-color: @color__header--background!important;
     min-height: auto;
     border-bottom: 1px solid darken(@color__body--background, 10%);
+    padding: 30px 0 30px 30px;
 
 
     // Flex Item
@@ -289,11 +289,6 @@ body {
 
     }
 
-    // Comapny Link
-    .company-link {
-        color: @color__h2--text;
-    }
-
     // Navigation Toggle Button
     .navigation-toggle {
         background-color: @color__h2--text;
@@ -308,5 +303,15 @@ body {
         &:after, &:before {
             background: @color-swatch4;
         }
+    }
+}
+
+.page--default .template-header {
+    position: relative;
+}
+
+.page--default {
+    .main-content {
+        padding-top: 0;
     }
 }
