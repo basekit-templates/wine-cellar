@@ -109,8 +109,19 @@
 
 
 .product-content {
-
+    width: 100%;
+    float: right;
+    display: block;
+    .product--one-image & { 
+        width: 48%;
+        margin-top: 10px;
+    }
+    @media @tablet {
+        text-align: center;
+        width: 100%!important;
+    }
 }
+
 
 // Product Header
 // ------------------------------
@@ -118,7 +129,6 @@
 .product-header {
     .clearfix;
     position: relative;
-    top: -1em;
     z-index: 1;
 
     // Message
@@ -150,7 +160,6 @@
         font-family: @font__h4--font-family;
         line-height: @font__h4--line-height;
         font-weight: @font__h4--font-weight;
-        font-style: italic;
         color: @color__ecomproduct-price--text;
     }
 

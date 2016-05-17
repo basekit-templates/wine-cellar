@@ -14,7 +14,7 @@
             "color4":"#000000",
             "color5":"#424D51",
             "color6":"#ffffff",
-            "color7":"#9AA7B5"
+            "color7":"#f5f5f5"
         }
     },
     "fontSwatch": {
@@ -227,7 +227,7 @@
             "color__blogpostlist-title--text" : "@color__h3--text"
         },
         "ecommerce": {
-            "color__ecomproductslist-product-title--text" : "@color__p--text",
+            "color__ecomproductslist-product-title--text" : "@color__h2--text",
             "color__ecomproduct-title--text" : "@color__h2--text",
             "color__ecomproduct-price--text" : "@color__link--text"
         }
