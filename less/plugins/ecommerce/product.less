@@ -62,16 +62,26 @@
         display: none !important;
     }
 
-    .product--one-image & {
+    .product--one-image {
         display: block;
-        height: 0;
         margin: 0 auto;
-        padding-bottom: 40%;
         position: relative;
 
         @media @bp-global-small {
             width: 100%;
-            padding-bottom: 70%;
+        }
+
+        .image-link {
+            background-position: -9999px;
+            margin-bottom: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image {
+            display: block;
+            margin: 0 auto;
+            max-height: 800px;
         }
     }
 }
@@ -113,7 +123,7 @@
     display: block;
     background-color: @color-swatch7;
     padding: 40px;
-    
+
     @media @tablet {
         text-align: center;
         width: 100%!important;
