@@ -55,25 +55,18 @@
 // ------------------------------
 
 
-.product-image {
-    display: none;
+.product--one-image {
 
-    &.no-image {
-        display: none !important;
-    }
-
-    .product--one-image {
+    .product-image {
         display: block;
         margin: 0 auto;
         position: relative;
 
-        @media @bp-global-small {
-            width: 100%;
-        }
-
         .image-link {
             background-position: -9999px;
             margin-bottom: 0;
+            height: auto;
+            line-height: 100%;
             overflow: hidden;
             position: relative;
         }
