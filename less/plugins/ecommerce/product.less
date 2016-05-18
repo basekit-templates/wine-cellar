@@ -19,6 +19,12 @@
     max-width: 1000px;
     margin: 40px auto;
     .clearfix
+    @media @tablet {
+        max-width: 720px;
+    }
+    @media @mobile {
+        max-width: 340px;
+    }
 }
 
 .ecom-product [data-name="ecomproduct"] {
@@ -300,6 +306,11 @@
 
 
     .product-attribute-title {
+        display: block;
+        margin-bottom: 18px;
+        @media @tablet {
+            margin-bottom: 20px;
+        }
     }
 
 
@@ -350,6 +361,10 @@
 
     // Category Link, Tag Link
     // ------------------------------
+
+    .category-link {
+        font-weight: 700;
+    }
 
 
     .category-link, .tag-link {
