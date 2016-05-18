@@ -19,33 +19,6 @@
 // ------------------------------
 
 
-.basket-toggle {
-    background-color: transparent;
-    padding: 0 14px;
-    height: 47px;
-    line-height: 47px;
-    letter-spacing: 0;
-    font-size: 14px;
-    margin: 0;
-    box-shadow:  inset 0px 0px 0px 2px fade(@color-swatch2, 0%);
-
-    @media @bp-global-small, @bp-global-medium {
-        width: 100%;
-        text-align: center;
-    }
-
-    &:hover {
-        background-color: transparent;
-        border-bottom: 2px solid @color-swatch3;
-        color: @font-swatch3-color;
-    }
-
-    &:before {
-        font-size: 18px;
-    }
-}
-
-
 
 
 // ------------------------------
@@ -62,7 +35,7 @@
     background-color: fade(@color-swatch3,95%);
     height: 100vh;
     overflow: hidden;
-    z-index: 10000;
+    z-index: 99999;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
@@ -153,7 +126,6 @@
         position: absolute;
         top: 0;
         right: 0;
-        background-color: @color-swatch2;
         cursor: pointer;
     }
 }
@@ -332,8 +304,7 @@
         transition: all 0.3s ease-in-out;
 
         &:hover {
-            background-color: @color-swatch3;
-            color: @font-swatch7-color;
+            background-color: transparent!important;
         }
 
         // Icon
@@ -377,7 +348,7 @@
     margin: 0;
     width: 100%;
     max-width: 600px;
-    padding: 10px 0!important;
+    padding: 10px 20px!important;
     position: relative;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -400,7 +371,6 @@
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    background-color: transparent!important;
 
 
 
@@ -432,6 +402,24 @@
 
 }
 
+.icon--remove:before, 
+.icon--close:before {
+    content: "\f00d"!important;
+    border-style: none;
+    left: 0;
+    &:hover {
+        background-color: transparent!important;
+    }
+}
+
+.ecombasket__basket-item {
+
+.button:hover:before, 
+.button:focus:before, 
+.button:active:before {
+    transform: inherit!important;
+}
+}
     // Total Number
 
     .total-number {}
@@ -442,12 +430,5 @@
 
 
 .view-basket {
-    box-shadow: none;
-    background-color: @color-swatch1;
-    color: @font-swatch5-color;
-
-    &:hover {
-        background-color: fade(@color-swatch1, 80%);
-    }
 }
 

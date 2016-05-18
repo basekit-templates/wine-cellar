@@ -12,7 +12,7 @@
             "color2":"#FBE6A1",
             "color3":"#cfa759",
             "color4":"#000000",
-            "color5":"#424D51",
+            "color5":"#8d8d8d",
             "color6":"#ffffff",
             "color7":"#f5f5f5"
         }
@@ -53,7 +53,7 @@
         },
         "font5": {
             "font-family": "\"Lora\", \"Georgia\", serif",
-            "font-size": "14px",
+            "font-size": "15px",
             "font-weight": "400",
             "line-height": "30px",
             "color": "@color-swatch5",
@@ -150,7 +150,7 @@
             "font__p--font-weight" : "@font-swatch5-font-weight",
             "font__p--line-height" : "@font-swatch5-line-height",
             "font__p--letter-spacing" : "@font-swatch5-letter-spacing",
-            "color__p--text": "@color-swatch4"
+            "color__p--text": "@color-swatch5"
         },
         "header": {
             "color__header--background" : "#22242b"
