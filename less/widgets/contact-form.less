@@ -9,6 +9,7 @@
 .widget__contactform {
     position: relative;
     background-color: @color__form--background;
+    padding: 50px;
     .boxshadow;
 
     &:after {
@@ -24,6 +25,9 @@
         }
     }
 
+    @media @mobile {
+        padding: 20px;
+    }
 
 
     // Form Group
@@ -72,13 +76,8 @@
     
     .form-body {
     	margin: 0 0 0 auto;
-        padding: 0px 50px 50px 50px;
     
-        @media @tablet {
-            padding: 0 20px 20px;
-        }
         @media @bp-global-small {
-            padding: 0 20px 20px;
             width: auto;
         }
     }
@@ -97,11 +96,10 @@
             font-size: @font__h2--font-size;
             line-height: @font__h2--line-height;
             text-align: left;
-            padding: 50px 50px 20px;
             &:after {
                 height: 3px;
                 display: block;
-                width: 6%;
+                width: 50px;
                 background: @color__button--background;
                 content: '';
                 margin-top: 15px;
@@ -112,9 +110,8 @@
     	       width: 100%;
     	       text-align: left;
     	       margin-bottom: 20px;
-    	       padding: 20px 20px;
-    	       font-size: 20px;
-    	       line-height: 24px;
+                font-size: 28px;
+                line-height: 38px;
     	    }
         }
     
@@ -151,6 +148,33 @@
         padding: 4px 20px;
     }
 
+}
+
+// All Columns
+// ------------------------------
+
+
+.responsivecolumns {
+
+    .widget__contactform {
+        padding: 30px;
+    }    
+
+
+    // 4 columns
+    // ------------------------------
+
+
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+
+    }
 }
     
     

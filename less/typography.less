@@ -427,6 +427,32 @@ a {
 			width: 100%;
 		}
 
+        // h1
+
+        h1, .heading--1 {
+            font-size: bkscale(@font__h1--font-size, 0.6);
+            line-height: bkscale(@font__h1--line-height, 0.6);
+        }
+
+        // Product list title
+
+        .ecomproductslist__product-item-title,
+        .ecomfeaturedproducts__title-link {
+            font-size: bkscale(@font__h3--font-size, 0.6);
+            line-height: bkscale(@font__h3--line-height, 0.6);
+        }
+
+        // Product list image
+
+        .product-item-image, .product-item-image .image-link {
+            height: 100%;
+            line-height: 100%;
+        }
+
+        .slide-navigation {
+            top: 33%;
+        }
+
 
 		// 4 columns
 		// ------------------------------
@@ -445,6 +471,19 @@ a {
 					display: none;
 				}
 			}
+
+            // Slide Pagination
+
+            .slide-pagination {
+                display: none;
+            }
+
+            // Twitter
+
+            .twitter__avatar {
+                float: left;
+            }
+
 		}
 	}
 }
