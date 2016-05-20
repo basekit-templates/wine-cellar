@@ -115,7 +115,7 @@
             "color__link--text": "#314beb",
             "font__companyname--font-family": "@font-swatch10-font-family",
             "font__companyname--font-size": "26px",
-            "font__companyname--font-weight": "400",
+            "font__companyname--font-weight": "700",
             "font__companyname--line-height": "32px",
             "font__companyname--letter-spacing": "2px",
             "color__companyname--text": "#fff"
