@@ -106,6 +106,7 @@ body {
     @media @mobile {
         order: 1;
         border-bottom: 1px solid lighten(@color__header--background, 5%);
+        padding: 20px;
     }
 
 
@@ -128,12 +129,27 @@ body {
     .flex-item:first-child {
         .flex-display;
         .justify-content(flex-start);
+        @media @tablet {
+            .align-items(flex-start);
+            width: 100%;
+        }
+        @media @mobile {
+            display: inline-block;
+            width: 50%;
+            float: left;
+        }
     }
     .flex-item:last-child {
         .flex-display;
         .justify-content(flex-end);
         @media @tablet {
             width: 100%;
+        }
+        @media @mobile {
+            display: inline-block;
+            width: 50%;
+            float: right;
+            position: relative;
         }
     }
     .flex-logo {
@@ -143,32 +159,6 @@ body {
     .flex-companyname {
         .flex-display;
          .align-items(@align: center);
-    }
-
-    .flex-item {
-
-        @media @tablet {
-            width: 40%;
-
-            &:first-child {
-                width: 100%;
-            }
-            
-            &:last-child {
-                width: 30%;
-            }
-        }
-        @media @mobile {
-            width: 100%;
-
-
-            &:last-child {
-                position: absolute;
-                top: -2px;
-                right: 0;
-                width: 20%;
-            }
-        }
     }
 }
 

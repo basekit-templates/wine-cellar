@@ -108,8 +108,8 @@
 // -----------------------------
 
 
-button, 
-.button, 
+button:not(.navigation-toggle), 
+.button:not(.navigation-toggle), 
 .blogpostlist__read-more {
     display: inline-block;
     vertical-align: middle;
@@ -120,11 +120,6 @@ button,
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
-}
-
-button, 
-.button, 
-.blogpostlist__read-more {
     &:before {
         pointer-events: none;
         position: absolute;
@@ -140,6 +135,10 @@ button,
         border-width: 10px 10px 0 10px;
         border-color: @color__button--background transparent transparent transparent;
     }
+}
+
+.icon--pause:before {
+    content: '\f04c';
 }
 
 .blogpostlist__read-more {
@@ -159,7 +158,9 @@ button,
     }
 }
 
-.button:hover:before, .button:focus:before, .button:active:before {
+.button:hover:before, 
+.button:focus:before, 
+.button:active:before {
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
 }
