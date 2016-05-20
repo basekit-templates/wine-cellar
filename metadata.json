@@ -156,9 +156,7 @@
             "color__header--background" : "#22242b"
         },
         "navigation": {
-            "color__navigation--background" : "#fff",
             "color__navigation--text": "#fff",
-            "color__navigation--text--selected": "#fff",
             "font__navigation--font-family": "@font-swatch6-font-family",
             "font__navigation--font-size": "16px",
             "font__navigation--font-weight": "300",
@@ -194,7 +192,8 @@
             "color__slideshow-description--text" : "#bebebe"
         },
         "twitter": {
-            "color__twitter-item--background" : "white"
+            "color__twitter-item--background" : "white",
+            "color__twitter-account-name--text" : "#000"
         },
         "feature": {
             "color__feature-content--background": "#000000",
