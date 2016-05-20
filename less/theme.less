@@ -156,18 +156,20 @@ body {
          .align-items(@align: center);
     }
 }
-
+.bk-tpl-hidden {
+    display: none;
+}
 
 // Header: Additional
 // ------------------------------
 
 // For default page and when feature is hidden
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header,
+.widget[data-widget-type="image"].bk-tpl-hidden + .template-header,
 .page--default .template-header {
-    position: relative!important;
+    position: relative;
     z-index: inherit;
     width: 100%;
-    background-color: @color__header--background!important;
+    background-color: @color__header--background;
     min-height: auto;
     border-bottom: 1px solid darken(@color__body--background, 10%);
     padding: 30px 0 30px 30px;
@@ -259,8 +261,12 @@ body {
     }
 }
 
-.widget[data-widget-type="feature"].bk-tpl-hidden + .template-header + .hero-signup {
+.widget[data-widget-type="image"].bk-tpl-hidden + .template-header + .hero-signup {
     display: none;
+}
+
+.widget[data-widget-type="image"].bk-tpl-hidden + .template-header + .navigation-list--children {
+    background-color: @color__header--background;
 }
 
 
