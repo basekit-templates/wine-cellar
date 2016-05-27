@@ -174,29 +174,40 @@
     .widget__signupform {
         padding: 30px;
     }
-}
 
-// 4 columns
-// ------------------------------
+    // 4 columns
+    // ------------------------------
+    
+    
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth,
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+    
+    	// Form Body
+    
+    	.widget__signupform .form-body {
+    		display: block;
+    	}
+    
+    	// First Form Group
+    
+    	.widget__signupform .form-group:first-child {
+    		margin-bottom: 10px;
+    	}
+    
+    }
+    
+    .columns-four-first,
+    .columns-four-second,
+    .columns-four-third,
+    .columns-four-fourth {
+        .widget__signupform:after {
+            display: none;
+        }
+    }
 
-
-.columns-four-first,
-.columns-four-second,
-.columns-four-third,
-.columns-four-fourth,
-.columns-three-left,
-.columns-three-right,
-.columns-three-middle {
-
-	// Form Body
-
-	.widget__signupform .form-body {
-		display: block;
-	}
-
-	// First Form Group
-
-	.widget__signupform .form-group:first-child {
-		margin-bottom: 10px;
-	}
 }
