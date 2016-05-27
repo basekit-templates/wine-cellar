@@ -191,7 +191,7 @@ function ecomproductSlider() {
 // ------------------------------
 
 $(document).ready(function(){
-    if ( $("blogpostlist__post-article").hasClass("post-article--has-image") ) {
-    $("body").addClass("has-image");
-    }
+    if ( $("article").hasClass("blogpostlist__post-image") ) {
+    $("blogpostlist__post-article").addClass("has-image");
+}
 });
