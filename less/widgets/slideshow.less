@@ -120,6 +120,7 @@
 .responsiveslideshow__figure {
 	background-size: cover;
 	background-position: center;
+    background-color: transparent!important;
 }
 
 
@@ -134,15 +135,24 @@
 	display: block;
 	position: absolute;
 	top: 45%;
-	left: 0;
+	left: -20px;
 	right: 0;
 	min-height: 50px;
 	margin: 0;
+    width: 16.5%;
+    background-color: @color__button--background;
+    .boxshadow;
 
-	@media @mobile {
-		top: inherit;
-		bottom: 0;
-	}
+    @media @bp-global-medium {
+        width: 173px;    
+    }
+
+    @media @bp-global-small {
+        top: inherit;
+        bottom: 0;  
+        left: 0px;
+        width: 173px;
+    }
 
 
 
@@ -181,12 +191,6 @@
 			}
 		}
 
-		@media @bp-global-small {
-			width: 40px;
-			height: 40px;
-			line-height: 40px;
-		}
-
 		&:before {
 			margin: 0;
 			color: #eee;
@@ -222,7 +226,6 @@
 
 
 .responsiveslideshow__previous-button {
-	left: 20px;
 
 	@media @tablet {
 		left: 0;
@@ -248,7 +251,6 @@
 
 
 .responsiveslideshow__next-button {
-	right: 20px;
 
 	@media @tablet {
 		right: 0;
@@ -275,12 +277,10 @@
 .responsiveslideshow__pause-toggle {
 	top: 0;
 	bottom: 0;
-	left: 70px;
 	margin: auto;
 
 	@media @mobile {
 		margin: 0;
-		left: 50px;
 	}
 
 	// Icon
@@ -317,7 +317,7 @@
 	height: 100%;
 	margin: 0;
 	padding: 30px;
-	background-color: fade(@color__slideshow-caption--background, 70%);
+	background-color: fade(@color__slideshow-caption--background, 50%);
 	text-align: center;
 
 	@media @bp-global-medium {
@@ -359,7 +359,7 @@
 	line-height: 56px;
 	letter-spacing: 2px;
 	color: @color__slideshow-title--text;
-	text-transform: uppercase;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
 
 	@media @bp-global-medium {
         font-size: 36px;
@@ -384,6 +384,7 @@
 	font-weight: @font__feature-strapline--font-weight;
 	line-height: 26px;
 	color: @color__slideshow-description--text;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
 
     @media @tablet {
 		font-size: 12px;
@@ -444,9 +445,11 @@
 	right: 101px;
 	min-height: 50px;
 
-	@media @bp-global-small {
+	@media @tablet {
 		min-height: 40px;
 		bottom: -4px;
+        left: 250px;
+        right: 0px;
 	}
 }
 
@@ -465,6 +468,8 @@
 
 	@media @bp-global-small {
 		padding-top: 10px;
+        text-align: right;
+        margin-right: 10px;
 	}
 }
 

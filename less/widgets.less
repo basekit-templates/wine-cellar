@@ -109,7 +109,7 @@
 
 
 button:not(.navigation-toggle), 
-.button:not(.navigation-toggle, .slide-navigation .button:before), 
+.button:not(.navigation-toggle), 
 .blogpostlist__read-more {
     display: inline-block;
     vertical-align: middle;
@@ -134,6 +134,16 @@ button:not(.navigation-toggle),
         bottom: 0;
         border-width: 10px 10px 0 10px;
         border-color: @color__button--background transparent transparent transparent;
+    }
+}
+
+button.responsiveslideshow__pause-toggle {
+    &.js-btn-play:before {
+        content: '\f04c';
+    }
+
+    &.pause:before {
+        content: '\f04b';
     }
 }
 
