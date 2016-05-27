@@ -641,6 +641,7 @@
     }
 }
 
+// Blogpostlist 
 .blogpostlist__post-content {
     margin-left: 0;
 }
@@ -649,10 +650,13 @@
     margin-left: -50px;
 }
 
-.blogpostlist__post-image + .blogpostlist .post-article:nth-of-type(even) .post-content {
-    margin-right: -50px;
-    .blogpostlist__post-excerpt {
-        margin: 0 auto;
+// Blogpostlist Even Nth Type
+.blogpostlist .post-article:nth-of-type(even) {
+    .blogpostlist__post-image + .blogpostlist__post-content {
+        margin-right: -50px;
+        .blogpostlist__post-excerpt {
+            margin: 0 auto;
+        }
     }
 }
 
@@ -660,7 +664,10 @@
     padding-top: 100%;
 }
 
-.blogpostlist .post-article:nth-of-type(even) .post-content,
+.blogpostlist .post-article:nth-of-type(even) .blogpostlist__post-content {
+    margin: 0;
+}
+
 .blogpostlist__post-excerpt {
     margin: 0;
 }
