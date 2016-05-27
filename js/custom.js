@@ -182,16 +182,3 @@ function ecomproductSlider() {
     });
 
 }
-
-
-
-
-// ------------------------------
-// Blogpostlist Article
-// ------------------------------
-
-$(document).ready(function(){
-    if ( $("article").hasClass("blogpostlist__post-image") ) {
-    $("blogpostlist__post-article").addClass("has-image");
-}
-});
