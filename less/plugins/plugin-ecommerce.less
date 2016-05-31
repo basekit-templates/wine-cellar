@@ -135,10 +135,24 @@
     display: none;
 }
 
+// Summary Titles
 .ecombasketsummary__summary-title,
 .ecomproduct__product-title,
 .ecomfeaturedproducts__listing-title {
     text-align: center;
+}
+
+.ecomfeaturedproducts__listing-title {
+    &:after {
+        border-top: 3px solid @color-swatch3;
+        content: "";
+        display: block;
+        position: relative;
+        margin: 25px auto 35px;
+        min-width: 80px;
+        max-width: 200px;
+        width: 50px;
+    }
 }
 
 .ecombasketsummary__summary-title {
@@ -739,8 +753,9 @@ select {
 .ecomcategorieslist {
     .category-list-body {
         text-align: center;
-        padding: 1px 20px;
+        padding: 20px 20px 10px;
         background-color: #f5f5f5;
+        margin-bottom: 10px;
     }
     .category-item {
         display: inline-block;
