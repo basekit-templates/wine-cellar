@@ -123,11 +123,6 @@
             width: 100%;
         }
     }
-    .button {
-        &:before {
-            left: calc(42%)!important;
-        }
-    }
 }
 
 .ecombasketsummary__summary-section {
@@ -228,7 +223,12 @@
     z-index: 9999;
     position: relative;
     &:before {
-        left: calc(42%)!important;
+        left: calc(45%)!important;
+        border-width: 0!important;
+        color: #000!important;
+        bottom: 5px!important;
+        z-index: 99999!important;
+        transform: none!important;
     }
     @media @tablet {
         margin-right: 0;
