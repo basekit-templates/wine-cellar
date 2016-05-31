@@ -16,7 +16,6 @@
 }
 
 .ecom-product {
-    padding-top: 40px;
     @media @mobile {
         padding-top: 20px;
     }
@@ -302,11 +301,6 @@
 // ------------------------------
 
 
-.ecomproduct__product-attribute-title {
-    margin-bottom: 16px;
-}
-
-
 .product-attributes {
     clear: both;
 
@@ -348,7 +342,7 @@
     .product-category, .product-tags {
         display: inline-block;
         vertical-align: top;
-        line-height: 1;
+        line-height: 15px;
         margin: 0 2em 1em 0;
 
         // P
@@ -361,6 +355,9 @@
     .product-category {
         @media @tablet {
             margin: 0 10px 0 0;
+        }
+        @media @mobile {
+            margin-bottom: 20px;
         }
     }
 
