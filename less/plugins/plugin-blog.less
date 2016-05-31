@@ -155,7 +155,6 @@
 
      // Post Header
     .post-header {
-        max-width: 700px;
         width: 100%;
         margin: 0 auto;
     }
@@ -170,6 +169,9 @@
         margin-top: 70px;
         &:after {
             display: none;
+        }
+        @media @mobile {
+            margin-top: 50px;
         }
     }
 
@@ -544,9 +546,9 @@
     
 }
 
-.button--pagination {
+.blogpostlist__button {
     &:before {
-        left: calc(36%);
+        left: calc(36%)!important;
     }
 }
 
