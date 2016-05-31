@@ -402,6 +402,10 @@
         background-color: white;
         padding: 0;
         margin-bottom: 80px;
+        @media @tablet {
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
         &:after {
            display: none; 
         }
@@ -496,8 +500,7 @@
 
     // Blog Post Title
     // -----------------
-    .post-title,
-    .post-excerpt {
+    .post-title {
           margin-bottom: 20px;
     }
 
@@ -512,6 +515,10 @@
         .timestamptransform;
         position: absolute;
         z-index: 9999;
+        @media @tablet {
+            position: relative;
+            transform: inherit;
+        }
         .timestamp {
             font-size: 14px;
             margin: 0 auto;
@@ -520,8 +527,9 @@
             text-align: right;
             width: 110px;
             @media @tablet {
-                text-align: right;
                 margin-top: 30px;
+                text-align: center;
+                width: 100%;
             }
         }
     }
@@ -642,9 +650,6 @@
         position: relative;
         display: block;
         transform: initial;
-        width: 140px;
-        text-align: right;
-        float: right;
         padding: 0;
         left: 0;
         top: 0;
@@ -654,6 +659,9 @@
 // Blogpostlist 
 .blogpostlist__post-content {
     margin-left: 0;
+    @media @tablet {
+        padding: 20px 20px 30px 20px;
+    }
 }
 
 .blogpostlist__post-image + .blogpostlist__post-content {
@@ -727,7 +735,7 @@
 
     .blogpostlist__post-content {
         margin-left: 0;
-        padding: 50px;
+        padding: 30px;
     }
 
     .blogpostlist .post-article {
