@@ -127,9 +127,6 @@
 
 .ecombasketsummary__summary-section {
     text-align: center;
-    @media @tablet {
-        padding: 20px;
-    }
 }
 
 .ecombasketsummary__summary-form:after, 
@@ -138,7 +135,6 @@
     display: none;
 }
 
-.ecomproductslist__listing-title,
 .ecombasketsummary__summary-title,
 .ecomproduct__product-title,
 .ecomfeaturedproducts__listing-title {
@@ -149,7 +145,7 @@
     display: none;
 }
 
-.listing-title {
+.ecomproductslist__listing-title {
     display: none;
 }
 
@@ -474,6 +470,13 @@
     .summary-form {
         border:0;
         padding:0;
+    }
+}
+
+.summary-table {
+    margin-bottom: 40px;
+    @media @tablet {
+        margin-bottom 20px;
     }
 }
 
