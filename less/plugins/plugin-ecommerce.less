@@ -301,6 +301,7 @@
 }
 
 .ecomproduct__product-image.no-image {
+    background-image: none;
     margin: 0 auto 20px;
 }
 
@@ -627,6 +628,9 @@
         padding-left: 0;
         color: @color__p--text;
         text-transform: uppercase;
+        @media @tablet {
+            display: none;
+        }
     }
     .fieldset--search {
         float: right;
