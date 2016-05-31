@@ -335,7 +335,6 @@
         max-width: 100%;
         margin-top: -30px;
         width: 100%;
-        margin: -40px auto;
         padding: 20px;
     }
 }
@@ -556,6 +555,7 @@
     @media @mobile {
         display: block;
         margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -658,6 +658,9 @@
 
 .blogpostlist__post-image + .blogpostlist__post-content {
     margin-left: -50px;
+    @media @tablet {
+        margin-left: 0;
+    }
 }
 
 // Blogpostlist Even Nth Type

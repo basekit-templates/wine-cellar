@@ -58,7 +58,7 @@
 // -----------------
 
 .navigation-bar {
-    background-color: @color__navigation--background;
+    background-color: fade(@color__navigation--background, 10%);
     @media @tablet {
         width: 52px;
         float: right;
@@ -234,7 +234,7 @@
         transition-duration: 0.4s;
 
         padding: 150px 20px;
-        background-color: fade(@color__header--background, 90%);
+        background-color: @color__header--background;
 
         @media @mobile {
             padding: 100px 20px;
