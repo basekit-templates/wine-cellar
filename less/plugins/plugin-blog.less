@@ -166,12 +166,12 @@
         z-index: 2;
         background-color: transparent;
         padding: 0;
-        margin-top: 70px;
+        margin-top: 50px;
         &:after {
             display: none;
         }
         @media @mobile {
-            margin-top: 50px;
+            margin-top: 30px;
         }
     }
 
@@ -567,7 +567,15 @@
     }
 }
 
-
+.blogpost__network-item {
+    .icon--facebook:after {
+        content: "\f09a"!important;
+    }
+    
+    .icon--googleplus:after {
+        content: "\f0d5"!important;
+    }
+}
 
 
 // ---------------------------------

@@ -66,6 +66,9 @@
 
 .logo {
     margin-right: 10px;
+    @media @tablet {
+        max-width: 90%;
+    }
     @media @mobile {
         max-width: 70%;
         float: left;
@@ -164,11 +167,14 @@ button.responsiveslideshow__pause-toggle {
     font-weight: @font__button--font-weight;
     line-height : @font__button--line-height;
     letter-spacing: @font__button--letter-spacing;
+    &:before {
+        left: calc(42%);
+    }
     &:hover {
         &:before {
             -webkit-transform: translateY(10px);
             transform: translateY(10px);
-            left: calc(43%);
+            left: calc(42%);
         }
     }
 }
