@@ -514,7 +514,7 @@
         .align-self(@align: flex-end);
         .timestamptransform;
         position: absolute;
-        z-index: 9999;
+        z-index: 99999;
         @media @tablet {
             position: relative;
             transform: inherit;
@@ -694,8 +694,9 @@
 }
 
 .blogpostlist .post-article .blogpostlist__post-footer:nth-child(even) {
-    padding-top: 0;
-    padding-right: 50px;
+    padding-right: 0;
+    padding-top: 0px;
+    top: 50px;
 }
 
 .blogpostlist__post-image + .blogpostlist__post-content {
@@ -809,7 +810,11 @@
         // Post Content
 
         .blogpostlist__post-content {
-            padding: 20px 30px 10px;
+            padding: 20px 30px 30px;
+        }
+
+        .blogpostlist .post-article .blogpostlist__post-footer:nth-child(even) {
+            padding-right: 0;
         }
     }
 
