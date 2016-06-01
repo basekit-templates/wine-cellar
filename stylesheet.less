@@ -104,6 +104,10 @@
 
 body {
     background-color: darken(@color__body--background, 12%);
+    background-image: image('/images/feature-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh; 
 }
 
 
@@ -115,13 +119,8 @@ body {
     display: block!important;
     height: 100%;
     min-height: 100%!important;
-    background-color: @color__body--background;
     max-width: 100%;
-
-    @media @bp-global-above-fullwidth {
-        max-width: @value__container--width;
-        margin: 0 auto;
-    }
+    background-color: transparent;
 }
 
 // Container
@@ -130,7 +129,7 @@ body {
 .container {
 	width: 90%;
 	margin: 0 auto;
-	max-width: 1024px;
+	max-width: 1200px;
 
 	&--lrg {
 		max-width: 100%;
@@ -181,13 +180,8 @@ body {
     position: relative;
     text-align: center;
     font-size: 0;
-    .imagewidget__caption {
-        background-color: fade(@color__image-caption--background, 30%);
-    }
-    .imagewidget__image-title,
-    .imagewidget__image-description {
-        display: none;
-    }
+    height: 800px;
+    background-color: fade(@color__image-caption--background, 30%);
 }
 
 .hero-signup {
