@@ -139,18 +139,14 @@
 	right: 0;
 	min-height: 50px;
 	margin: 0;
-    width: 16.5%;
+    width: 169px;
     background-color: @color__button--background;
     .boxshadow;
 
     @media @tablet {
-        width: 100%;  
-    }
-
-    @media @mobile {
         top: inherit;
         bottom: 0;  
-        left: 0px;
+        left: 0;
     }
 
 
@@ -562,6 +558,11 @@
         .columns-three-left,
         .columns-three-right,
         .columns-three-middle {
+
+            .slide-pagination {
+                left: 50%;
+                right: 0;
+            }
 
 		}
 	}
