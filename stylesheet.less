@@ -196,8 +196,6 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    max-width: 75%;
-    margin: 0px auto;
 
     @media @tablet {
         top: 30%;
@@ -235,9 +233,12 @@ body {
     }
     .homepage-header,
     .homepage-content {
+        max-width: 75%;
+        margin: 0px auto;
         margin-bottom: 20px;
         @media @tablet {
             margin-bottom: 10px;
+            max-width: 100%;
         }
     }
     input[type="email"] {

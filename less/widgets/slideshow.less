@@ -143,11 +143,11 @@
     background-color: @color__button--background;
     .boxshadow;
 
-    @media @bp-global-medium {
+    @media @tablet {
         width: 100%;  
     }
 
-    @media @bp-global-small {
+    @media @mobile {
         top: inherit;
         bottom: 0;  
         left: 0px;
@@ -374,6 +374,13 @@
     }
 }
 
+.responsiveslideshow__image-title {
+    max-width: 60%;
+    @media @tablet {
+        max-width: 100%;
+    }
+}
+
 
 // Image Description
 .responsiveslideshow__image-description,
@@ -555,7 +562,7 @@
         .columns-three-left,
         .columns-three-right,
         .columns-three-middle {
-            
+
 		}
 	}
 }
