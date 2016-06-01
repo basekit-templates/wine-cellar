@@ -124,6 +124,7 @@ body {
     .flex-item:first-child {
         .flex-display;
         .justify-content(flex-start);
+        .flex-wrap(wrap);
         @media @tablet {
             .align-items(flex-start);
             width: 100%;
@@ -147,10 +148,12 @@ body {
     .flex-logo {
         .flex-display;
         .align-items(@align: center);
+        .flex(1 0 auto);
     }
     .flex-companyname {
         .flex-display;
-         .align-items(@align: center);
+        .align-items(@align: center);
+        .flex(1 0 auto);
     }
 }
 .bk-tpl-hidden {
