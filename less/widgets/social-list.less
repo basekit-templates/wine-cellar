@@ -51,29 +51,16 @@
 
 	}
 
-	&:after {
-        content: '';
-        position: absolute;
-        top: 94%;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 10px solid #cfa759;
-        clear: both;
-        margin-left: -5px;
-        z-index:999;
-        @media @mobile {
-            top: 88%;
-        }
-    }
-
 	// Icon hover
 	&:hover:before {
 		background-color: @color__button--background--hover;
 	}
 }
-
+.social-item {
+    .icon--twitter:after {
+        display: none;
+    }
+}
 
 // Social Name
 // ------------------------------
