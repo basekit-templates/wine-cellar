@@ -447,8 +447,12 @@ body {
     .align-self(@align: auto);
 
     // Styles
-    width: 100%;
+    width: 50%;
     text-align: center;
+
+    @media @mobile {
+        width: 100%;
+    }
 
     // Map
     .map__embed-wrap {
