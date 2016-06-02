@@ -183,7 +183,6 @@ body {
 .hero {
     position: relative;
     text-align: center;
-    font-size: 0;
     height: 800px;
     background-color: fade(@color__image-caption--background, 30%);
     @media @tablet {
@@ -274,15 +273,44 @@ body {
         display: none;
     }
 
-    h1, h2, h3, h4, h5, p, a, span {
+    h1, h2, h3, h4, h5, p, a, span, legend {
         color: @font-swatch9-color;
         text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .profile__map {
+        margin-top: -100px;
+    }
+
+    .profile .tweet-item {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .profile .input {
+        margin-right: 0;
+        padding: 20px;
+    }
+
+    .signupform__fieldset {
+        margin-top: -80px;
     }
 
     .social-item {
         display: inline-block;
         margin: 0;
         position: relative;
+    }
+
+    .signupform__button {
+        line-height: 42px;
+        border-radius: 0;
+        &:hover {
+            border-radius: 0;
+        }
+        &:before {
+            left: calc(35%);
+        }
     }
 
     .social-social-link {
