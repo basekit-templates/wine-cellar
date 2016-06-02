@@ -149,11 +149,17 @@ body {
         .flex-display;
         .align-items(@align: center);
         .flex(1 0 auto);
+        @media @tablet {
+            .flex(0 0 auto);
+        }
     }
     .flex-companyname {
         .flex-display;
         .align-items(@align: center);
         .flex(1 0 auto);
+        @media @tablet {
+            .flex(0 0 auto);
+        }
     }
 }
 .bk-tpl-hidden {

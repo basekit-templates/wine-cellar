@@ -108,6 +108,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh; 
+    .page--default {
+        background-color: @color__body--background;
+        background-image: none;
+    }
 }
 
 
@@ -182,6 +186,12 @@ body {
     font-size: 0;
     height: 800px;
     background-color: fade(@color__image-caption--background, 30%);
+    @media @tablet {
+        height: 700px;
+    }
+    @media @mobile {
+        height: 600px;
+    }
 }
 
 .hero-signup {
@@ -192,9 +202,8 @@ body {
     right: 0;
 
     @media @tablet {
-        top: 30%;
+        top: inherit;
         max-width: 100%;
-        position: relative;
         background-color: @color__header--background;
         padding: 20px 20px 30px 20px;
     }
@@ -263,6 +272,11 @@ body {
 
     @media @tablet {
         display: none;
+    }
+
+    h1, h2, h3, h4, h5, p, a, span {
+        color: @font-swatch9-color;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
     }
 
     .social-item {
