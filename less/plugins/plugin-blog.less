@@ -230,7 +230,7 @@
     .button {
         padding: 8px 20px;
         &:before {
-            left: calc(45%);
+            top: 28px;
         }
         @media @mobile {
             min-width: 100%;
@@ -458,6 +458,16 @@
         display: inline-block;
     }
 
+
+    // Button
+    // -----------------
+    .read-more {
+        &:before {
+            left: 40%!important;
+        }
+    }
+
+
     // Title Link
     // -----------------
     .title-link {
@@ -534,6 +544,17 @@
         display: inline-block;
         width: 49%;
 
+        .blogpostlist__button {
+            &:hover {
+                background-color: @color__button--background--hover;
+            }
+        }
+
+        .icon--previous:before,
+        .icon--next:before {
+            display: none;
+        }
+
         &:nth-child(1) {
             text-align: left;
         }
@@ -546,12 +567,6 @@
         }
     }
     
-}
-
-.blogpostlist__button {
-    &:before {
-        left: calc(36%)!important;
-    }
 }
 
 .network-item {
@@ -577,51 +592,6 @@
     
     .icon--googleplus:after {
         content: "\f0d5"!important;
-    }
-}
-
-
-// ---------------------------------
-// Columns variations
-// ---------------------------------
-
-
-// Blog Post List
-// --------------
-
-// Blog Post List in 2 columns
-.responsivecolumns .columns-two-left, 
-.responsivecolumns .columns-two-right {
-    .blogpostlist__post-footer .timestamp {
-        width: 100%;
-        @media @tablet {
-            text-align: center;
-        }
-    }
-}
-
-// Blog Post List in 3 columns
-.responsivecolumns .columns-three-left, 
-.responsivecolumns .columns-three-middle, 
-.responsivecolumns .columns-three-right {
-    .blogpostlist__post-footer .timestamp {
-        width: 100%;
-    }
-    .blogpostlist__read-more {
-        padding: 8px 20px;
-    }
-}
-
-// Blog Post List in 4 columns
-.responsivecolumns .columns-four-first, 
-.responsivecolumns .columns-four-second, 
-.responsivecolumns .columns-four-third, 
-.responsivecolumns .columns-four-fourth {
-    .blogpostlist__post-footer .timestamp {
-        width: 100%;
-    }
-    .blogpostlist__read-more {
-        padding: 8px;
     }
 }
 
@@ -793,8 +763,20 @@
         max-width: 100%;
     }
 
+    // Blog Post List in 2 columns
 
-    // 4 columns
+    .columns-two-left, 
+    .columns-two-right {
+        .blogpostlist__post-footer .timestamp {
+            width: 100%;
+            @media @tablet {
+                text-align: center;
+            }
+        }
+    }
+
+
+    // 3 & 4 columns
     // ------------------------------
 
 
@@ -839,13 +821,42 @@
         }
     }
 
+    // 3 columns
+    // ------------------------------
+
+    .columns-three-left,
+    .columns-three-right,
+    .columns-three-middle {
+
+        .blogpostlist__post-footer .timestamp {
+            width: 100%;
+        }
+        .blogpostlist__read-more {
+            padding: 8px 20px;
+        }
+
+    }
+
+    // 4 columns
+    // ------------------------------
+
     .columns-four-first,
     .columns-four-second,
     .columns-four-third,
     .columns-four-fourth {
+
         .widget__blogsearch:after {
             display: none;
         }
+
+        .blogpostlist__post-footer .timestamp {
+            width: 100%;
+        }
+
+        .blogpostlist__read-more {
+            padding: 8px;
+        }
+
     }
 }
 
