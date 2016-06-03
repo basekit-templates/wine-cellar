@@ -2,29 +2,31 @@
 
 {% block content %}
 
-<!-- Page Content -->
-<section class="page  page--home">
-
-    {% include "includes/hero.twig" %}
-
-    <!-- Zone Content -->
-    <div id="main-scroll" class="main-content">
-
-            <div class="page-container">
-
-                <div class="home-profile-widget">
+<div class="site-container">
+    <!-- Page Content -->
+    <section class="page  page--home">
     
-                    {{widget('profile', 'home-social-icons', { 'profileType':'socialicons'})|raw}}
+        {% include "includes/hero.twig" %}
+    
+        <!-- Zone Content -->
+        <div id="main-scroll" class="main-content">
+    
+                <div class="page-container">
+    
+                    <div class="home-profile-widget">
+        
+                        {{widget('profile', 'home-social-icons', { 'profileType':'socialicons'})|raw}}
+        
+                    </div>
+    
+                {{zone('main')|raw}}
     
                 </div>
-
-            {{zone('main')|raw}}
-
+                
             </div>
             
-        </div>
-        
-</section>
+    </section>
+</div>
 
 {% include "includes/footer.twig" %}
 
