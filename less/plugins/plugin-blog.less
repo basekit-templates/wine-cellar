@@ -603,13 +603,17 @@
 // ---------------------------------
 
 .post-image + .post-content + .blogpostlist__post-footer {
-    padding-left: 85%;
-    width: 100%;
-    top: 10%;
+    top: 20%;
     left: 57%;
     &:nth-child(even) {
         padding-top: 100%;
         left: 80px;
+    }
+    @media screen and (min-width: 1000px) and (max-width: 1200px) { 
+        left: 58%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1000px) { 
+        left: 60%;
     }
     @media @tablet {
         position: relative;
