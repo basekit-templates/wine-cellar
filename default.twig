@@ -2,30 +2,33 @@
 
 {% block content %}
 
-<section class="page  page--default">
-
-
-    {% include "includes/header.twig" %}
-
-    <div class="template-title-wrap">
-        <div class="template-title">
-            <h2 style="padding-bottom: 0;">
-                <span>{{ page.title }}</span>
-            </h2>
+<!-- Site Container (Required) -->
+<div class="site-container  page--default">
+    <section class="page">
+    
+    
+        {% include "includes/header.twig" %}
+    
+        <div class="template-title-wrap">
+            <div class="template-title">
+                <h2 style="padding-bottom: 0;">
+                    <span>{{ page.title }}</span>
+                </h2>
+            </div>
         </div>
-    </div>
-
-
-    <!-- Zone Content -->
-    <div class="main-content">
-        <div class="container">
-
-            {{zone('main')|raw}}
-
+    
+    
+        <!-- Zone Content -->
+        <div class="main-content">
+            <div class="container">
+    
+                {{zone('main')|raw}}
+    
+            </div>
         </div>
-    </div>
-
-</section>
+    
+    </section>
+</div>
 
 {% include "includes/footer.twig" %}
 
