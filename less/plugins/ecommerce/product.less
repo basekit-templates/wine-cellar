@@ -23,8 +23,10 @@
 
 .ecom-product .widget {
     max-width: 1000px;
-    margin: 0px auto;
-    padding-bottom: 40px;
+    margin: 0px auto 40px;
+    &:last-child {
+        margin: 0;
+    }
     .clearfix;
     @media @tablet {
         max-width: 720px;
