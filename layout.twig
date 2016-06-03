@@ -28,13 +28,8 @@
 
 <body class="{{ page.backgroundClass }}">
 
-	<!-- Site Container (Required) -->
-	<div class="site-container">
-
-		{% block content %}
-		{% endblock %}
-
-	</div>
+	{% block content %}
+	{% endblock %}
 
     {% include basekit.bodyScript %}
 
