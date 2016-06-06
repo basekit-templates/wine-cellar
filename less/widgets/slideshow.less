@@ -136,16 +136,13 @@
 	position: absolute;
 	top: 45%;
 	left: -10px;
-	right: 0;
 	min-height: 50px;
 	margin: 0;
-    width: 160px;
-    background-color: @color__button--background;
     .boxshadow;
 
     @media @tablet {
         top: inherit;
-        bottom: 0;  
+        bottom: 0;
         left: 0;
     }
 
@@ -156,19 +153,24 @@
 
 
 	.button {
+        background-color: @color__button--background;
+        border-radius: 0;
 		position: absolute;
 		top: 0;
 		padding: 0;
 		text-align: center;
-		background-color: transparent;
 		box-shadow: none;
 		width: 50px;
 		height: 50px;
 		line-height: 50px;
 		font-size: 36px;
 
+        &:not(:first-child) {
+            margin-left: -4px;
+        }
+
 		&:hover {
-			background-color: transparent!important;
+            border-radius: 0;
 			&:before {
 				transform: initial;
 			}

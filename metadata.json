@@ -4,7 +4,7 @@
     "thumbnail":"thumbnail.png",
     "screenshot":"screenshot.jpg",
     "templateType":"standard",
-    "pageTypes": [ "home", "default"],
+    "pageTypes": [ "home", "default", "ecomproduct"],
     "colorSwatches":
     {
         "Swatch 1": {

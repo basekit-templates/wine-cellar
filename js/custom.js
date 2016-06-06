@@ -15,13 +15,6 @@ $(document).ready(function() {
         }
     });
 
-    // Adds variation class when there is only one product image
-
-    if($(".ecomproduct__product-gallery").length == 0)
-    {
-       $("body").addClass("product-one-image");
-    }
-
     // Next Button for ecom gallery
     $('.product-gallery').each(function() {
       var max = 5;
