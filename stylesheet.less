@@ -232,14 +232,22 @@ body {
         line-height: @font__h1--line-height;
         max-width: 80%;
         margin: 0px auto;
-        @media @bp-global-medium {
+        @media @bp-1050 {
             max-width: 100%;
-            font-size: bkscale(@font__h1--font-size, 0.75);
-            line-height: bkscale(@font__h1--line-height, 0.75);
+            font-size: bkscale(@font__h1--font-size, 0.85);
+            line-height: bkscale(@font__h1--line-height, 0.85);
         }
         @media @tablet {
             font-size: bkscale(@font__h1--font-size, 0.75);
             line-height: bkscale(@font__h1--line-height, 0.75);
+        }
+        @media only screen and (max-height: 800px) {
+            font-size: bkscale(@font__h1--font-size, 0.65);
+            line-height: bkscale(@font__h1--line-height, 0.65);
+        }
+        @media only screen and (max-height: 600px) {
+            font-size: bkscale(@font__h1--font-size, 0.5);
+            line-height: bkscale(@font__h1--line-height, 0.5);
         }
         @media @mobile {
             font-size: bkscale(@font__h1--font-size, 0.5);
