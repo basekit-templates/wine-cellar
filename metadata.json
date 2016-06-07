@@ -183,17 +183,16 @@
         },
         "gallery": {
             "color__gallery-caption--background" : "#26292f",
-            "color__gallery-title--text" : "#fff",
-            "color__gallery-description--text" : "#bebebe"
+            "color__gallery-title--text" : "#000000",
+            "color__gallery-description--text" : "#000000"
         },
         "slideshow": {
-            "color__slideshow-caption--background": "#000",
+            "color__slideshow-caption--background": "rgba(255,255,255, 0.5)",
             "color__slideshow-title--text" : "#fff",
             "color__slideshow-description--text" : "#bebebe"
         },
         "twitter": {
-            "color__twitter-item--background" : "white",
-            "color__twitter-account-name--text" : "#000"
+            "color__twitter-item--background" : "white"
         },
         "feature": {
             "color__feature-content--background": "#000000",

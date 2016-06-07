@@ -228,8 +228,8 @@ body {
         text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.15);
     }
     h1 {
-        font-size: @font__h1--font-size;
-        line-height: @font__h1--line-height;
+        font-size: bkscale(@font__h1--font-size, 1.15);
+        line-height: bkscale(@font__h1--line-height, 1.15);
         max-width: 80%;
         margin: 0px auto;
         @media @bp-1050 {
@@ -259,7 +259,6 @@ body {
     }
     .homepage-header,
     .homepage-content {
-        max-width: 75%;
         margin: 0px auto;
         margin-bottom: 20px;
         @media @tablet {
