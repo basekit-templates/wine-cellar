@@ -60,7 +60,7 @@
 
 
 // -----------------------------
-// #Logo 
+// #Logo
 // -----------------------------
 
 
@@ -72,6 +72,12 @@
     @media @mobile {
         max-width: 70%;
         float: left;
+    }
+}
+
+.logo-image {
+    @media only screen and (max-height: 600px) {
+        max-width: 120px;
     }
 }
 
@@ -115,8 +121,8 @@
 // -----------------------------
 
 
-button:not(.navigation-toggle), 
-.button:not(.navigation-toggle), 
+button:not(.navigation-toggle),
+.button:not(.navigation-toggle),
 .blogpostlist__read-more {
     display: inline-block;
     vertical-align: middle;
@@ -127,6 +133,7 @@ button:not(.navigation-toggle),
     backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
     position: relative;
+    padding: 4px 16px;
     &:before {
         pointer-events: none;
         position: absolute;
@@ -178,22 +185,22 @@ button.responsiveslideshow__pause-toggle {
     }
 }
 
-.button:hover:before, 
-.button:focus:before, 
+.button:hover:before,
+.button:focus:before,
 .button:active:before {
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
 }
 
-button, 
+button,
 .button,
 .social-link,
 .blogpostlist__read-more {
     background-color: @color__button--background;
-    border-radius: 6px;
+    border-radius: 4px;
     &:hover {
         background-color: @color__button--background;
-        border-radius: 6px;
+        border-radius: 4px;
     }
 }
 

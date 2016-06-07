@@ -21,9 +21,9 @@
        "title": "Playfair / Karla",
         "font1": {
             "font-family": "\"Playfair Display\", Times New Roman, serif",
-            "font-size": "60px",
+            "font-size": "52px",
             "font-weight": "400",
-            "line-height": "72px",
+            "line-height": "60px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
@@ -177,7 +177,7 @@
             "color__button--text--hover" : "white",
             "font__button--font-family" : "@font-swatch7-font-family",
             "font__button--font-size" : "13px",
-            "font__button--font-weight" : "700",
+            "font__button--font-weight" : "500",
             "font__button--line-height" : "44px",
             "font__button--letter-spacing" : "2px"
         },
