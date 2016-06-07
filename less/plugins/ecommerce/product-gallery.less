@@ -28,15 +28,16 @@
     .animation;
     overflow: visible;
     position: relative;
-    height: 0;
-    padding-bottom: 30%;
-    margin: 20px 0;
+    height: 500px;
+    margin: 0 0 50px;
     z-index: 1;
 
+    @media only screen and (max-height: 600px) {
+        height: 300px;
+    }
 
 
     // Prev Next Buttons
-
 
     .btnnext, .btnprev {
         position: absolute;
@@ -136,7 +137,11 @@
         }
 
         .image {
-            max-height: 475px;
+            max-height: 500px;
+
+            @media only screen and (max-height: 600px) {
+                height: 300px;
+            }
         }
 
 
