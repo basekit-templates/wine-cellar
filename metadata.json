@@ -187,7 +187,7 @@
             "color__gallery-description--text" : "#000000"
         },
         "slideshow": {
-            "color__slideshow-caption--background": "rgba(255,255,255, 0.5)",
+            "color__slideshow-caption--background": "rgba(0,0,0, 0.5)",
             "color__slideshow-title--text" : "#fff",
             "color__slideshow-description--text" : "#bebebe"
         },
