@@ -434,7 +434,7 @@ button.responsiveslideshow__pause-toggle.js-btn-play:before {
 
 	.button {
 		opacity: .4;
-		background-color: @color__body--background;
+		background-color: #ADADAD;
 		&:before {
 			display: none;
 		}
@@ -444,7 +444,7 @@ button.responsiveslideshow__pause-toggle.js-btn-play:before {
 
 	&.selected .button {
 		opacity: 1;
-		background-color: @color__body--background;
+		background-color: #9E9E9E;
 	}
 }
 
@@ -471,6 +471,9 @@ button.responsiveslideshow__pause-toggle.js-btn-play:before {
         left: 250px;
         right: 0px;
 	}
+    @media @mobile {
+        display: none;
+    }
 }
 
 
