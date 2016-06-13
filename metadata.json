@@ -183,8 +183,8 @@
         },
         "gallery": {
             "color__gallery-caption--background" : "#000000",
-            "color__gallery-title--text" : "#000000",
-            "color__gallery-description--text" : "#000000"
+            "color__gallery-title--text" : "#ffffff",
+            "color__gallery-description--text" : "#ffffff"
         },
         "slideshow": {
             "color__slideshow-caption--background": "rgba(0,0,0, 0.5)",
