@@ -387,6 +387,23 @@ body {
     }
 }
 
+.home-profile-widget .social-social-link {
+    &:hover {
+        &:after {
+    border-left: solid transparent 15px;
+    border-right: solid transparent 15px;
+    border-bottom: solid #fff 20px;
+    bottom: -22px;
+    content: " ";
+    height: 0;
+    left: 50%;
+    margin-left: -15px;
+    position: absolute;
+    width: 0;
+        }
+    }
+}
+
 // Footer Blocks
 // ------------------------------
 
@@ -535,7 +552,7 @@ body {
 // ------------------------------
 
 .template-footer {
-    text-align: Center;
+    text-align: center;
     padding: 20px;
     background-color: black;
     color: white;
