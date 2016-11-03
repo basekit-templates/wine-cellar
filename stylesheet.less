@@ -107,6 +107,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     max-height: 100vh;
+    @media only screen and (max-height: 600px) {
+        min-height: 680px;
+        max-height: 680px;
+    }
 
     .page--default {
         background-color: @color__body--background;
@@ -170,6 +174,7 @@ body {
     @media @tablet {
         max-width: 100%;
         padding: 2%;
+        width: 100%;
     }
 }
 
@@ -192,12 +197,11 @@ body {
     text-align: center;
     background-color: fade(@color__image-caption--background, 35%);
     @media @tablet {
-        height: 100vh;
+        height: 100%;
     }
 
     @media only screen and (max-height: 600px) {
         min-height: auto;
-        height: 100vh;
     }
 }
 
