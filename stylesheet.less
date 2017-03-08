@@ -132,9 +132,11 @@ body.edit .hero {
 }
 
 body.edit {
-    .site-container {
-        min-height: auto!important;
-	height: auto;
+    @media only screen and (max-width: 860px) {
+	    .site-container {
+		min-height: auto!important;
+		height: auto;
+	    }
     }
 }
 
