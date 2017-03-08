@@ -121,6 +121,22 @@ body {
         background-image: none;
     }
 }
+	
+body.edit,
+body.edit .hero {
+    @media only screen and (max-width: 860px) {
+	 height: auto !important;
+	 max-height: 650px !important;
+	 overflow-y: visible;
+    }
+}
+
+body.edit {
+    .site-container {
+        min-height: auto!important;
+	height: auto;
+    }
+}
 
 
 // Site Container
