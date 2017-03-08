@@ -24,6 +24,17 @@ body {
     background-color: darken(@color__body--background, 12%);
 }
 
+body.edit,
+body.edit .hero {
+	@media @tablet {
+		max-height: 650px;
+	}
+	
+	@media @mobile {
+		max-height: 450px;
+	}
+}
+
 
 // Site Container
 .site-container {
