@@ -29,7 +29,7 @@
 	<script src="{{ asset('js/custom.js')}}"></script>
 	<script src="{{ asset('js/theme.js')}}"></script>
 
-	<script>
+	<script nonce="{{ numberUsedOnce }}">
         // Toggles class open to display/hide the whole navigation
         $( ".navigation-toggle" ).click(function() {
             $( ".bk-extendednavigation" ).toggleClass( "open" );
