@@ -111,7 +111,8 @@
             "color__secondary": "#cfa759"
         },
         "site": {
-            "color__body--background": "#fff",
+            "color__body--background": "fade(black, 30%)",
+            "color__container--background": "white",
             "color__link--text": "#314beb",
             "font__companyname--font-family": "@font-swatch10-font-family",
             "font__companyname--font-size": "26px",
