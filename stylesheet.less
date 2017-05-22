@@ -238,7 +238,7 @@ body.edit {
     left: 0;
     right: 0;
 
-    @media only screen and (max-height: 600px) {
+    @media (min-width: 100px) and (max-width: 550px) {
         .justify-content(flex-end);
         bottom: 30px;
     }
@@ -320,11 +320,7 @@ body.edit {
     margin: 0px auto;
     text-align: center;
 
-    @media @tablet {
-        display: none;
-    }
-
-    @media only screen and (max-height: 600px) {
+    @media (min-width: 100px) and (max-width: 550px) {
         display: none;
     }
 
