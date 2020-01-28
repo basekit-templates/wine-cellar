@@ -1,0 +1,88 @@
+
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+    // Stylesheet overrides
+    // -----------------------------
+
+
+    &.is-move-mode .template-header {
+        display: none;
+    }
+
+    &.row-selection-mode .template-header {
+        z-index: 9999!important;
+    }
+
+    .main-content {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    
+    
+    .page-container,
+    .container {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+    }
+
+
+    [data-name="row"] .widget__contactform:after,
+    [data-name="row"] .widget__advancedcontactform:after,
+    [data-name="row"] .widget__signupform:after,
+    [data-name="row"] .widget__blogsearch:after {
+        display: none;
+        visibility: hidden;
+    }
+
+
+    [data-name="row"] .select-wrap:after {
+        right: 8px;
+    }
+
+
+    // Migration styles
+    // -----------------------------
+    
+    
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1024px;
+        width: 95%;
+
+        @media @tablet {
+            width: 91%;
+        }
+    }
+    
+    
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 20px;
+
+        @media @mobile {
+            margin-top: 20px;
+        }
+    }
+
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 20px;
+    }
+}
