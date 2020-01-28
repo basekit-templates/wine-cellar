@@ -16,7 +16,7 @@
 	{% include basekit.headScript %}
 </head>
 
-<body class="{{ page.backgroundClass }}">
+<body {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }}">
 
 	{% block content %}
 	{% endblock %}
@@ -25,11 +25,11 @@
 
 	<!-- jQuery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
 	<script src="{{ asset('js/custom.js')}}"></script>
 	<script src="{{ asset('js/theme.js')}}"></script>
 
 	<script nonce="{{ numberUsedOnce }}">
+
         // Toggles class open to display/hide the whole navigation
         $( ".navigation-toggle" ).click(function() {
             $( ".bk-extendednavigation" ).toggleClass( "open" );
@@ -37,13 +37,11 @@
         });
 
         // Toggles class open to display/hide folders
-
         $( ".navigation-item.folder .item-name--parent" ).each(function() {
             $( this ).click(function() {
                     $( this ).parent( ".navigation-item.folder" ).toggleClass( "open-folder" );
             });
         });
-
     </script>
 
 	{% block scripts %}
