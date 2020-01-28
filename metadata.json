@@ -5,6 +5,7 @@
     "screenshot":"screenshot.jpg",
     "templateType":"standard",
     "pageTypes": [ "home", "default", "ecomproduct"],
+    "versionTenCompatible": 1,
     "colorSwatches":
     {
         "Swatch 1": {
